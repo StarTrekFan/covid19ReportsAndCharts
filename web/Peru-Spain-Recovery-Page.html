@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Peru Recovery','Spain Recovery'],['01/22',0,0],['01/23',0,0],['01/24',0,0],['01/25',0,0],['01/26',0,0],['01/27',0,0],['01/28',0,0],['01/29',0,0],['01/30',0,0],['01/31',0,0],['02/01',0,0],['02/02',0,0],['02/03',0,0],['02/04',0,0],['02/05',0,0],['02/06',0,0],['02/07',0,0],['02/08',0,0],['02/09',0,0],['02/10',0,0],['02/11',0,0],['02/12',0,0],['02/13',0,0],['02/14',0,0],['02/15',0,2],['02/16',0,0],['02/17',0,0],['02/18',0,0],['02/19',0,0],['02/20',0,0],['02/21',0,0],['02/22',0,0],['02/23',0,0],['02/24',0,0],['02/25',0,2],['02/26',0,2],['02/28',0,2],['02/29',0,2],['03/01',0,2],['03/02',0,2],['03/03',0,2],['03/04',0,2],['03/05',0,2],['03/06',0,2],['03/07',0,30],['03/08',0,30],['03/09',0,32],['03/10',0,32],['03/11',0,183],['03/12',0,183],['03/14',0,517],['03/15',0,517],['03/16',0,530],['03/17',1,1028],['03/18',1,1081],['03/19',1,1107],['03/20',1,1588],['03/21',1,2125],['03/22',1,2125],['03/23',1,3355],['03/24',1,3794],['03/25',1,5367],['03/26',14,7015],['03/27',16,9357],['03/28',16,12285],['03/29',16,14709],['03/30',53,16780],['03/31',394,19259],['04/01',394,22647],['04/02',537,26743],['04/03',537,30513]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Peru & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 80px 20px 0;
+}
+
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+        <div class="row justify-content-md-center">
+            <H3><b>COVID-19 RECOVERY</b></H3></H3>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px;">
+                <div class="progress-bar" role="progressbar" style="width: 5682%;" aria-valuenow="5682" aria-valuemin="0" aria-valuemax="100"><b>Spain - 30513</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Peru - 537</b></div>
+              </div>
+            </div>
+         </div>
+        <div class="row justify-content-md-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                 <a class="nav-link active" role="button" href="Peru-Page.html">Back to Peru</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href='Peru-Spain-Infections-Page.html' role="button"  >Compare Infections</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href='Peru-Spain-Deaths-Page.html' role="button">Compare Deaths</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link disabled" href='#' role="button">Compare Recovery</a>
+                </li>
+            </ul>
+         </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

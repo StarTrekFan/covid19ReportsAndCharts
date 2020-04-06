@@ -1,0 +1,27 @@
+Country,StatusDate,Infections,Deaths,Recovery
+Bosnia and Herzegovina,3/5/2020,2,0,0
+Bosnia and Herzegovina,3/7/2020,3,0,0
+Bosnia and Herzegovina,3/10/2020,5,0,0
+Bosnia and Herzegovina,3/11/2020,7,0,0
+Bosnia and Herzegovina,3/12/2020,11,0,0
+Bosnia and Herzegovina,3/14/2020,18,0,0
+Bosnia and Herzegovina,3/15/2020,24,0,0
+Bosnia and Herzegovina,3/16/2020,25,0,0
+Bosnia and Herzegovina,3/17/2020,26,0,2
+Bosnia and Herzegovina,3/18/2020,38,0,2
+Bosnia and Herzegovina,3/19/2020,63,0,2
+Bosnia and Herzegovina,3/20/2020,89,0,2
+Bosnia and Herzegovina,3/21/2020,93,1,2
+Bosnia and Herzegovina,3/22/2020,126,1,2
+Bosnia and Herzegovina,3/23/2020,132,1,2
+Bosnia and Herzegovina,3/24/2020,166,3,2
+Bosnia and Herzegovina,3/25/2020,176,3,2
+Bosnia and Herzegovina,3/26/2020,191,3,2
+Bosnia and Herzegovina,3/27/2020,237,4,5
+Bosnia and Herzegovina,3/28/2020,258,5,5
+Bosnia and Herzegovina,3/29/2020,323,6,8
+Bosnia and Herzegovina,3/30/2020,368,10,17
+Bosnia and Herzegovina,3/31/2020,420,13,17
+Bosnia and Herzegovina,4/1/2020,459,13,19
+Bosnia and Herzegovina,4/2/2020,533,16,20
+Bosnia and Herzegovina,4/3/2020,579,17,27

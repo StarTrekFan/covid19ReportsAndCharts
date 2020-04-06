@@ -1,0 +1,17 @@
+Country,StatusDate,Infections,Deaths,Recovery
+Ethiopia,3/16/2020,5,0,0
+Ethiopia,3/18/2020,6,0,0
+Ethiopia,3/20/2020,9,0,0
+Ethiopia,3/22/2020,11,0,0
+Ethiopia,3/23/2020,11,0,0
+Ethiopia,3/24/2020,12,0,0
+Ethiopia,3/25/2020,12,0,0
+Ethiopia,3/26/2020,12,0,0
+Ethiopia,3/27/2020,16,0,0
+Ethiopia,3/28/2020,16,0,1
+Ethiopia,3/29/2020,21,0,1
+Ethiopia,3/30/2020,23,0,4
+Ethiopia,3/31/2020,26,0,2
+Ethiopia,4/1/2020,29,0,2
+Ethiopia,4/2/2020,29,0,3
+Ethiopia,4/3/2020,35,0,3
