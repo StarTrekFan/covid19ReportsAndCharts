@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Slovakia Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Slovakia Infections','Italy Infections'],['01/22',0,0],['01/23',0,0],['01/24',0,0],['01/25',0,0],['01/26',0,0],['01/27',0,0],['01/28',0,0],['01/29',0,0],['01/30',0,0],['01/31',0,2],['02/01',0,0],['02/02',0,0],['02/03',0,0],['02/04',0,0],['02/05',0,0],['02/06',0,0],['02/07',0,3],['02/08',0,0],['02/09',0,0],['02/10',0,0],['02/11',0,0],['02/12',0,0],['02/13',0,0],['02/14',0,0],['02/15',0,0],['02/16',0,0],['02/17',0,0],['02/18',0,0],['02/19',0,0],['02/20',0,0],['02/21',0,20],['02/22',0,62],['02/23',0,155],['02/24',0,229],['02/25',0,322],['02/26',0,453],['02/28',0,888],['02/29',0,1128],['03/01',0,1694],['03/02',0,2036],['03/03',0,2502],['03/04',0,3089],['03/05',0,3858],['03/06',1,4636],['03/07',0,5883],['03/08',3,7375],['03/09',0,9172],['03/10',7,10149],['03/11',10,12462],['03/12',16,0],['03/14',44,21157],['03/15',54,0],['03/16',63,27980],['03/17',72,31506],['03/18',105,35713],['03/19',123,41035],['03/20',137,47021],['03/21',178,53578],['03/22',185,59138],['03/23',186,63927],['03/24',204,69176],['03/25',216,74386],['03/26',226,80589],['03/27',269,86498],['03/28',292,92472],['03/29',314,97689],['03/30',336,101739],['03/31',363,105792],['04/01',400,110574],['04/02',426,115242],['04/03',450,119827],['04/04',471,124632],['04/05',485,128948],['04/06',534,132547]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Slovakia & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Slovakia Deaths','Italy Deaths'],['01/22',0,0],['01/23',0,0],['01/24',0,0],['01/25',0,0],['01/26',0,0],['01/27',0,0],['01/28',0,0],['01/29',0,0],['01/30',0,0],['01/31',0,0],['02/01',0,0],['02/02',0,0],['02/03',0,0],['02/04',0,0],['02/05',0,0],['02/06',0,0],['02/07',0,0],['02/08',0,0],['02/09',0,0],['02/10',0,0],['02/11',0,0],['02/12',0,0],['02/13',0,0],['02/14',0,0],['02/15',0,0],['02/16',0,0],['02/17',0,0],['02/18',0,0],['02/19',0,0],['02/20',0,0],['02/21',0,1],['02/22',0,2],['02/23',0,3],['02/24',0,7],['02/25',0,10],['02/26',0,12],['02/28',0,21],['02/29',0,29],['03/01',0,34],['03/02',0,52],['03/03',0,79],['03/04',0,107],['03/05',0,148],['03/06',0,197],['03/07',0,233],['03/08',0,366],['03/09',0,463],['03/10',0,631],['03/11',0,827],['03/12',0,0],['03/14',0,1441],['03/15',0,0],['03/16',0,2158],['03/17',0,2503],['03/18',1,2978],['03/19',1,3405],['03/20',1,4032],['03/21',1,4825],['03/22',0,5476],['03/23',0,6077],['03/24',0,6820],['03/25',0,7503],['03/26',0,8215],['03/27',0,9134],['03/28',0,10023],['03/29',0,10779],['03/30',0,11591],['03/31',0,12428],['04/01',1,13155],['04/02',1,13915],['04/03',1,14681],['04/04',1,15362],['04/05',1,15887],['04/06',2,16523]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Slovakia & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Slovakia Recovery','Italy Recovery'],['01/22',0,0],['01/23',0,0],['01/24',0,0],['01/25',0,0],['01/26',0,0],['01/27',0,0],['01/28',0,0],['01/29',0,0],['01/30',0,0],['01/31',0,0],['02/01',0,0],['02/02',0,0],['02/03',0,0],['02/04',0,0],['02/05',0,0],['02/06',0,0],['02/07',0,0],['02/08',0,0],['02/09',0,0],['02/10',0,0],['02/11',0,0],['02/12',0,0],['02/13',0,0],['02/14',0,0],['02/15',0,0],['02/16',0,0],['02/17',0,0],['02/18',0,0],['02/19',0,0],['02/20',0,0],['02/21',0,0],['02/22',0,1],['02/23',0,2],['02/24',0,1],['02/25',0,1],['02/26',0,3],['02/28',0,46],['02/29',0,46],['03/01',0,83],['03/02',0,149],['03/03',0,160],['03/04',0,276],['03/05',0,414],['03/06',0,523],['03/07',0,589],['03/08',0,622],['03/09',0,724],['03/10',0,724],['03/11',0,1045],['03/12',0,0],['03/14',0,1966],['03/15',0,0],['03/16',0,2749],['03/17',0,2941],['03/18',0,4025],['03/19',0,4440],['03/20',0,4440],['03/21',0,6072],['03/22',7,7024],['03/23',7,7432],['03/24',7,8326],['03/25',7,9362],['03/26',2,10361],['03/27',2,10950],['03/28',2,12384],['03/29',2,13030],['03/30',7,14620],['03/31',3,15729],['04/01',3,16847],['04/02',5,18278],['04/03',10,19758],['04/04',10,20996],['04/05',10,21815],['04/06',8,22837]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Slovakia & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Slovakia - Italy REPORT</b></H3>
+          </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 24822%;" aria-valuenow="24822" aria-valuemin="0" aria-valuemax="100"><b>Italy - 132547</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Slovakia - 534</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 826150%;" aria-valuenow="826150" aria-valuemin="0" aria-valuemax="100"><b>Italy - 16523</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Slovakia - 2</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 285462%;" aria-valuenow="285462" aria-valuemin="0" aria-valuemax="100"><b>Italy - 22837  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Slovakia - 8</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Slovakia-Page.html" role="button">Back to Slovakia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Slovakia-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Slovakia-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Slovakia-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
