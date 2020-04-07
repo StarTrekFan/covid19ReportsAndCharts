@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Chile Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Chile Infections','China Infections'],['01/22',0,547],['01/23',0,639],['01/24',0,916],['01/25',0,1399],['01/26',0,2062],['01/27',0,2863],['01/28',0,5494],['01/29',0,6070],['01/30',0,8124],['01/31',0,9783],['02/01',0,11842],['02/02',0,16606],['02/03',0,19692],['02/04',0,23679],['02/05',0,27374],['02/06',0,30490],['02/07',0,34056],['02/08',0,36759],['02/09',0,39771],['02/10',0,42168],['02/11',0,44268],['02/12',0,44699],['02/13',0,59831],['02/14',0,66183],['02/15',0,68346],['02/16',0,70357],['02/17',0,72345],['02/18',0,74138],['02/19',0,74545],['02/20',0,74980],['02/21',0,75471],['02/22',0,76741],['02/23',0,77223],['02/24',0,76987],['02/25',0,77474],['02/26',0,77900],['02/28',0,78330],['02/29',0,78995],['03/01',0,79588],['03/02',0,79749],['03/03',1,79574],['03/04',1,79538],['03/05',4,79465],['03/06',0,79771],['03/07',0,78619],['03/08',8,96511],['03/09',0,76902],['03/10',13,77201],['03/11',23,80921],['03/12',0,78096],['03/14',61,89071],['03/15',0,73594],['03/16',155,76200],['03/17',201,73937],['03/18',238,74324],['03/19',0,73834],['03/20',434,77325],['03/21',537,74098],['03/22',632,77772],['03/23',746,90091],['03/24',922,77482],['03/25',1142,76062],['03/26',1306,82309],['03/27',1610,77596],['03/28',1909,74444],['03/29',2139,92363],['03/30',2449,83709],['03/31',2738,78143],['04/01',3031,74562],['04/02',3404,82990],['04/03',3737,77177],['04/04',4161,76202],['04/05',4471,77250],['04/06',4815,76780]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Chile & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Chile Deaths','China Deaths'],['01/22',0,17],['01/23',0,18],['01/24',0,26],['01/25',0,42],['01/26',0,56],['01/27',0,82],['01/28',0,131],['01/29',0,133],['01/30',0,171],['01/31',0,213],['02/01',0,259],['02/02',0,361],['02/03',0,425],['02/04',0,490],['02/05',0,562],['02/06',0,632],['02/07',0,717],['02/08',0,804],['02/09',0,904],['02/10',0,1011],['02/11',0,1111],['02/12',0,1116],['02/13',0,1368],['02/14',0,1518],['02/15',0,1662],['02/16',0,1765],['02/17',0,1863],['02/18',0,2002],['02/19',0,2114],['02/20',0,2236],['02/21',0,2236],['02/22',0,2439],['02/23',0,2443],['02/24',0,2591],['02/25',0,2659],['02/26',0,2713],['02/28',0,2782],['02/29',0,2831],['03/01',0,2868],['03/02',0,2908],['03/03',0,2941],['03/04',0,2973],['03/05',0,3000],['03/06',0,3029],['03/07',0,3051],['03/08',0,3228],['03/09',0,3071],['03/10',0,3088],['03/11',0,3161],['03/12',0,3138],['03/14',0,3227],['03/15',0,3134],['03/16',0,3180],['03/17',0,3166],['03/18',0,3201],['03/19',0,3186],['03/20',0,3215],['03/21',0,3185],['03/22',1,3221],['03/23',2,3359],['03/24',2,3312],['03/25',3,3214],['03/26',4,3370],['03/27',5,3236],['03/28',6,3235],['03/29',7,3466],['03/30',8,3251],['03/31',12,3238],['04/01',16,3256],['04/02',18,3298],['04/03',22,3272],['04/04',27,3279],['04/05',34,3275],['04/06',37,3293]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Chile & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Chile Recovery','China Recovery'],['01/22',0,28],['01/23',0,30],['01/24',0,36],['01/25',0,39],['01/26',0,49],['01/27',0,58],['01/28',0,101],['01/29',0,120],['01/30',0,135],['01/31',0,214],['02/01',0,273],['02/02',0,463],['02/03',0,614],['02/04',0,843],['02/05',0,1114],['02/06',0,1470],['02/07',0,1995],['02/08',0,2592],['02/09',0,3215],['02/10',0,3889],['02/11',0,4630],['02/12',0,5079],['02/13',0,6212],['02/14',0,7922],['02/15',0,9293],['02/16',0,10701],['02/17',0,12441],['02/18',0,14198],['02/19',0,15951],['02/20',0,17985],['02/21',0,18692],['02/22',0,22544],['02/23',0,23455],['02/24',0,24869],['02/25',0,27521],['02/26',0,29930],['02/28',0,35897],['02/29',0,39066],['03/01',0,41918],['03/02',0,44577],['03/03',0,46903],['03/04',0,49299],['03/05',0,51466],['03/06',0,53172],['03/07',0,53511],['03/08',0,73026],['03/09',0,55004],['03/10',0,56620],['03/11',0,61644],['03/12',0,60146],['03/14',0,73747],['03/15',0,59745],['03/16',0,63167],['03/17',0,61788],['03/18',0,63087],['03/19',0,63291],['03/20',6,67370],['03/21',6,64731],['03/22',8,68769],['03/23',11,81315],['03/24',17,69184],['03/25',22,68245],['03/26',22,74558],['03/27',43,70482],['03/28',61,67634],['03/29',75,85593],['03/30',156,77483],['03/31',156,72076],['04/01',234,68535],['04/02',335,77243],['04/03',427,71511],['04/04',528,70708],['04/05',618,71956],['04/06',728,71588]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Chile & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Chile - China REPORT</b></H3>
+          </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 1595%;" aria-valuenow="1595" aria-valuemin="0" aria-valuemax="100"><b>China - 76780</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Chile - 4815</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 8900%;" aria-valuenow="8900" aria-valuemin="0" aria-valuemax="100"><b>China - 3293</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Chile - 37</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 9834%;" aria-valuenow="9834" aria-valuemin="0" aria-valuemax="100"><b>China - 71588  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Chile - 728</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Chile-Page.html" role="button">Back to Chile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Chile-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Chile-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Chile-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
