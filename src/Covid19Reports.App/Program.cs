@@ -15,20 +15,17 @@ namespace Covid19Reports.App
         private static IConfigurationRoot _configRoot;
         static void Main(string[] args)
         {
+
+            //This is the consolidated list of all data that will be used to generate the 
+            //static web pages
             var virusTrackerItems = GetVirusTrackerItems();
 
-
-            var landingPagePublisher = new LandingPagePublisher();
-
-            landingPagePublisher.DestinationFolder = ConfigRoot["DestinationFolder"];
-
-            landingPagePublisher.VirusTrackerItems = virusTrackerItems;
-
-            landingPagePublisher.PublishWebReports();
-
+            //The first page on the site with a list of all countries and their data
+            PublishLandingPage(virusTrackerItems);
+        
+            //Following reports are to be generated for all Countries
             var countries = virusTrackerItems.Select(item => item.Country).Distinct().ToList();
-            
-            Publishers.ForEach(publisher => {
+            CountryReportPublishers.ForEach(publisher => {
 
                 countries.ForEach(country => {
                      PublishReport(publisher,country,virusTrackerItems.Where(item => item.Country == country).ToList());
@@ -36,8 +33,18 @@ namespace Covid19Reports.App
                
             });
 
-        
-            var virusTrackerItemsForOtherCountries = virusTrackerItems.Where(item => GetCountriesToCompare().Any(oCountry => oCountry == item.Country));
+            //Publish Comparision Reports. This report could be run in the previous step
+            //but it will be very slow
+            PublishComparisionReports(virusTrackerItems);
+         
+        }
+
+        private static void PublishComparisionReports(List<VirusTrackerItem> virusTrackerItems)
+        {
+       
+            var countries = virusTrackerItems.Select(item => item.Country).Distinct().ToList();
+
+            var virusTrackerItemsForOtherCountries = GetVirusTrackerItems(GetCountriesToCompare(),virusTrackerItems);
 
             countries.ForEach(country => {
               
@@ -61,8 +68,16 @@ namespace Covid19Reports.App
 
             });
         }
+        private static void PublishLandingPage(List<VirusTrackerItem> virusTrackerItems)
+        {
+            var landingPagePublisher = new LandingPagePublisher();
 
+            landingPagePublisher.DestinationFolder = ConfigRoot["DestinationFolder"];
 
+            landingPagePublisher.VirusTrackerItems = virusTrackerItems;
+
+            landingPagePublisher.PublishWebReports();
+        }
         private static void PublishReport(Covid19ReportPublisher publisher,string country, List<VirusTrackerItem> virusTrackerItems)
         {
              publisher.Country = country;
@@ -91,6 +106,14 @@ namespace Covid19Reports.App
             dataConsolidator.ConsolidateData();
 
             return dataConsolidator.VirusTrackerItems;
+        }
+        
+        private static List<VirusTrackerItem> GetVirusTrackerItems(List<string> countries,List<VirusTrackerItem> virusTrackerItems)
+        {
+            var virusTrackerItemsForOtherCountries = virusTrackerItems.Where(item => countries.Any(oCountry => oCountry == item.Country)).ToList();
+
+            return virusTrackerItemsForOtherCountries;
+
         }
         private static IConfigurationRoot ConfigRoot
         {
@@ -135,7 +158,7 @@ namespace Covid19Reports.App
             return ConfigRoot.GetSection("CountriesToCompare").Get<List<string>>();
         }
 
-        private static List<Covid19ReportPublisher> Publishers
+        private static List<Covid19ReportPublisher> CountryReportPublishers
         {
             get
             {
