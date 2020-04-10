@@ -1,0 +1,8 @@
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\bin\Debug\netstandard2.0\Covid19Reports.Lib.deps.json
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\bin\Debug\netstandard2.0\Covid19Reports.Lib.dll
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\bin\Debug\netstandard2.0\Covid19Reports.Lib.pdb
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\obj\Debug\netstandard2.0\Covid19Reports.Lib.csprojAssemblyReference.cache
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\obj\Debug\netstandard2.0\Covid19Reports.Lib.AssemblyInfoInputs.cache
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\obj\Debug\netstandard2.0\Covid19Reports.Lib.AssemblyInfo.cs
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\obj\Debug\netstandard2.0\Covid19Reports.Lib.dll
+C:\Projects\covid19reportsandcharts\src\Covid19Reports.Lib\obj\Debug\netstandard2.0\Covid19Reports.Lib.pdb
