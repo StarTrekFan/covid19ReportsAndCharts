@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'West Bank and Gaza Infections','Spain Infections'],['03/26',84,57786],['03/27',91,65719],['03/28',98,73235],['03/29',109,80110],['03/30',116,87956],['03/31',119,95923],['04/01',134,104118],['04/02',161,112065],['04/03',194,119199],['04/04',217,126168],['04/05',237,131646],['04/06',254,136675],['04/07',261,141942],['04/08',263,148220],['04/09',263,153222]
+          ['Date', 'West Bank and Gaza Infections','Spain Infections'],['03/26',84,57786],['03/27',91,65719],['03/28',98,73235],['03/29',109,80110],['03/30',116,87956],['03/31',119,95923],['04/01',134,104118],['04/02',161,112065],['04/03',194,119199],['04/04',217,126168],['04/05',237,131646],['04/06',254,136675],['04/07',261,141942],['04/08',263,148220],['04/09',263,153222],['04/10',267,158273]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'West Bank and Gaza Deaths','Spain Deaths'],['03/26',1,4365],['03/27',1,5138],['03/28',1,5982],['03/29',1,6803],['03/30',1,7716],['03/31',1,8464],['04/01',1,9387],['04/02',1,10348],['04/03',1,11198],['04/04',1,11947],['04/05',1,12641],['04/06',1,13341],['04/07',1,14045],['04/08',1,14792],['04/09',1,15447]
+            ['Date', 'West Bank and Gaza Deaths','Spain Deaths'],['03/26',1,4365],['03/27',1,5138],['03/28',1,5982],['03/29',1,6803],['03/30',1,7716],['03/31',1,8464],['04/01',1,9387],['04/02',1,10348],['04/03',1,11198],['04/04',1,11947],['04/05',1,12641],['04/06',1,13341],['04/07',1,14045],['04/08',1,14792],['04/09',1,15447],['04/10',2,16081]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'West Bank and Gaza Recovery','Spain Recovery'],['03/26',17,7015],['03/27',17,9357],['03/28',18,12285],['03/29',18,14709],['03/30',18,16780],['03/31',18,19259],['04/01',18,22647],['04/02',18,26743],['04/03',21,30513],['04/04',21,34219],['04/05',25,38080],['04/06',24,40437],['04/07',42,43208],['04/08',44,48021],['04/09',44,52165]
+            ['Date', 'West Bank and Gaza Recovery','Spain Recovery'],['03/26',17,7015],['03/27',17,9357],['03/28',18,12285],['03/29',18,14709],['03/30',18,16780],['03/31',18,19259],['04/01',18,22647],['04/02',18,26743],['04/03',21,30513],['04/04',21,34219],['04/05',25,38080],['04/06',24,40437],['04/07',42,43208],['04/08',44,48021],['04/09',44,52165],['04/10',45,55668]
         ]);
 
         var options = {
@@ -107,19 +107,22 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 West Bank and Gaza - Spain REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 58259%;" aria-valuenow="58259" aria-valuemin="0" aria-valuemax="100"><b>Spain - 153222</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - West Bank and Gaza - 263</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 59278%;" aria-valuenow="59278" aria-valuemin="0" aria-valuemax="100"><b>Spain - 158273</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - West Bank and Gaza - 267</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 1544700%;" aria-valuenow="1544700" aria-valuemin="0" aria-valuemax="100"><b>Spain - 15447</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - West Bank and Gaza - 1</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 804050%;" aria-valuenow="804050" aria-valuemin="0" aria-valuemax="100"><b>Spain - 16081</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - West Bank and Gaza - 2</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 118557%;" aria-valuenow="118557" aria-valuemin="0" aria-valuemax="100"><b>Spain - 52165  </b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - West Bank and Gaza - 44</b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 123707%;" aria-valuenow="123707" aria-valuemin="0" aria-valuemax="100"><b>Spain - 55668  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - West Bank and Gaza - 45</b></div>
               </div>
              </div>
           </div>

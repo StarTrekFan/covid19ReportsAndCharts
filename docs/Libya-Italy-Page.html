@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Libya Infections','Italy Infections'],['03/24',1,69176],['03/25',1,74386],['03/26',1,80589],['03/27',1,86498],['03/28',3,92472],['03/29',8,97689],['03/30',8,101739],['03/31',10,105792],['04/01',10,110574],['04/02',11,115242],['04/03',11,119827],['04/04',18,124632],['04/05',18,128948],['04/06',19,132547],['04/07',20,135586],['04/08',21,139422],['04/09',24,143626]
+          ['Date', 'Libya Infections','Italy Infections'],['03/24',1,69176],['03/25',1,74386],['03/26',1,80589],['03/27',1,86498],['03/28',3,92472],['03/29',8,97689],['03/30',8,101739],['03/31',10,105792],['04/01',10,110574],['04/02',11,115242],['04/03',11,119827],['04/04',18,124632],['04/05',18,128948],['04/06',19,132547],['04/07',20,135586],['04/08',21,139422],['04/09',24,143626],['04/10',24,147577]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Libya Deaths','Italy Deaths'],['03/24',0,6820],['03/25',0,7503],['03/26',0,8215],['03/27',0,9134],['03/28',0,10023],['03/29',0,10779],['03/30',0,11591],['03/31',0,12428],['04/01',0,13155],['04/02',1,13915],['04/03',1,14681],['04/04',1,15362],['04/05',1,15887],['04/06',1,16523],['04/07',1,17127],['04/08',1,17669],['04/09',1,18279]
+            ['Date', 'Libya Deaths','Italy Deaths'],['03/24',0,6820],['03/25',0,7503],['03/26',0,8215],['03/27',0,9134],['03/28',0,10023],['03/29',0,10779],['03/30',0,11591],['03/31',0,12428],['04/01',0,13155],['04/02',1,13915],['04/03',1,14681],['04/04',1,15362],['04/05',1,15887],['04/06',1,16523],['04/07',1,17127],['04/08',1,17669],['04/09',1,18279],['04/10',1,18849]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Libya Recovery','Italy Recovery'],['03/24',0,8326],['03/25',0,9362],['03/26',0,10361],['03/27',0,10950],['03/28',0,12384],['03/29',0,13030],['03/30',0,14620],['03/31',1,15729],['04/01',0,16847],['04/02',0,18278],['04/03',0,19758],['04/04',0,20996],['04/05',0,21815],['04/06',1,22837],['04/07',1,24392],['04/08',8,26491],['04/09',8,28470]
+            ['Date', 'Libya Recovery','Italy Recovery'],['03/24',0,8326],['03/25',0,9362],['03/26',0,10361],['03/27',0,10950],['03/28',0,12384],['03/29',0,13030],['03/30',0,14620],['03/31',1,15729],['04/01',0,16847],['04/02',0,18278],['04/03',0,19758],['04/04',0,20996],['04/05',0,21815],['04/06',1,22837],['04/07',1,24392],['04/08',8,26491],['04/09',8,28470],['04/10',8,30455]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Libya - Italy REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 598442%;" aria-valuenow="598442" aria-valuemin="0" aria-valuemax="100"><b>Italy - 143626</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 614904%;" aria-valuenow="614904" aria-valuemin="0" aria-valuemax="100"><b>Italy - 147577</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Libya - 24</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 1827900%;" aria-valuenow="1827900" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18279</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 1884900%;" aria-valuenow="1884900" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18849</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Libya - 1</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 355875%;" aria-valuenow="355875" aria-valuemin="0" aria-valuemax="100"><b>Italy - 28470  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 380688%;" aria-valuenow="380688" aria-valuemin="0" aria-valuemax="100"><b>Italy - 30455  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Libya - 8</b></div>
               </div>
              </div>

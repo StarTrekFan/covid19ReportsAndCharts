@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Burma Infections','Italy Infections'],['03/27',8,86498],['03/28',8,92472],['03/29',10,97689],['03/30',14,101739],['03/31',15,105792],['04/01',15,110574],['04/02',20,115242],['04/03',20,119827],['04/04',21,124632],['04/05',21,128948],['04/06',22,132547],['04/07',22,135586],['04/08',22,139422],['04/09',23,143626]
+          ['Date', 'Burma Infections','Italy Infections'],['03/27',8,86498],['03/28',8,92472],['03/29',10,97689],['03/30',14,101739],['03/31',15,105792],['04/01',15,110574],['04/02',20,115242],['04/03',20,119827],['04/04',21,124632],['04/05',21,128948],['04/06',22,132547],['04/07',22,135586],['04/08',22,139422],['04/09',23,143626],['04/10',27,147577]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Burma Deaths','Italy Deaths'],['03/27',0,9134],['03/28',0,10023],['03/29',0,10779],['03/30',0,11591],['03/31',1,12428],['04/01',1,13155],['04/02',1,13915],['04/03',1,14681],['04/04',1,15362],['04/05',1,15887],['04/06',1,16523],['04/07',1,17127],['04/08',3,17669],['04/09',3,18279]
+            ['Date', 'Burma Deaths','Italy Deaths'],['03/27',0,9134],['03/28',0,10023],['03/29',0,10779],['03/30',0,11591],['03/31',1,12428],['04/01',1,13155],['04/02',1,13915],['04/03',1,14681],['04/04',1,15362],['04/05',1,15887],['04/06',1,16523],['04/07',1,17127],['04/08',3,17669],['04/09',3,18279],['04/10',3,18849]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Burma Recovery','Italy Recovery'],['03/27',0,10950],['03/28',0,12384],['03/29',0,13030],['03/30',0,14620],['03/31',0,15729],['04/01',0,16847],['04/02',0,18278],['04/03',0,19758],['04/04',0,20996],['04/05',0,21815],['04/06',0,22837],['04/07',0,24392],['04/08',0,26491],['04/09',2,28470]
+            ['Date', 'Burma Recovery','Italy Recovery'],['03/27',0,10950],['03/28',0,12384],['03/29',0,13030],['03/30',0,14620],['03/31',0,15729],['04/01',0,16847],['04/02',0,18278],['04/03',0,19758],['04/04',0,20996],['04/05',0,21815],['04/06',0,22837],['04/07',0,24392],['04/08',0,26491],['04/09',2,28470],['04/10',2,30455]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Burma - Italy REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 624461%;" aria-valuenow="624461" aria-valuemin="0" aria-valuemax="100"><b>Italy - 143626</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Burma - 23</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 546581%;" aria-valuenow="546581" aria-valuemin="0" aria-valuemax="100"><b>Italy - 147577</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Burma - 27</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 609300%;" aria-valuenow="609300" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18279</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 628300%;" aria-valuenow="628300" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18849</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Burma - 3</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 1423500%;" aria-valuenow="1423500" aria-valuemin="0" aria-valuemax="100"><b>Italy - 28470  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 1522750%;" aria-valuenow="1522750" aria-valuemin="0" aria-valuemax="100"><b>Italy - 30455  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Burma - 2</b></div>
               </div>
              </div>

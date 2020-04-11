@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Botswana Infections','Spain Infections'],['03/30',3,87956],['03/31',4,95923],['04/01',4,104118],['04/02',4,112065],['04/03',4,119199],['04/04',4,126168],['04/05',6,131646],['04/06',6,136675],['04/07',6,141942],['04/08',6,148220],['04/09',13,153222]
+          ['Date', 'Botswana Infections','Spain Infections'],['03/30',3,87956],['03/31',4,95923],['04/01',4,104118],['04/02',4,112065],['04/03',4,119199],['04/04',4,126168],['04/05',6,131646],['04/06',6,136675],['04/07',6,141942],['04/08',6,148220],['04/09',13,153222],['04/10',13,158273]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Botswana Deaths','Spain Deaths'],['03/30',0,7716],['03/31',1,8464],['04/01',1,9387],['04/02',1,10348],['04/03',1,11198],['04/04',1,11947],['04/05',1,12641],['04/06',1,13341],['04/07',1,14045],['04/08',1,14792],['04/09',1,15447]
+            ['Date', 'Botswana Deaths','Spain Deaths'],['03/30',0,7716],['03/31',1,8464],['04/01',1,9387],['04/02',1,10348],['04/03',1,11198],['04/04',1,11947],['04/05',1,12641],['04/06',1,13341],['04/07',1,14045],['04/08',1,14792],['04/09',1,15447],['04/10',1,16081]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Botswana Recovery','Spain Recovery'],['03/30',0,16780],['03/31',0,19259],['04/01',0,22647],['04/02',0,26743],['04/03',0,30513],['04/04',0,34219],['04/05',0,38080],['04/06',0,40437],['04/07',0,43208],['04/08',0,48021],['04/09',0,52165]
+            ['Date', 'Botswana Recovery','Spain Recovery'],['03/30',0,16780],['03/31',0,19259],['04/01',0,22647],['04/02',0,26743],['04/03',0,30513],['04/04',0,34219],['04/05',0,38080],['04/06',0,40437],['04/07',0,43208],['04/08',0,48021],['04/09',0,52165],['04/10',0,55668]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Botswana - Spain REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 1178631%;" aria-valuenow="1178631" aria-valuemin="0" aria-valuemax="100"><b>Spain - 153222</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 1217485%;" aria-valuenow="1217485" aria-valuemin="0" aria-valuemax="100"><b>Spain - 158273</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Botswana - 13</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 1544700%;" aria-valuenow="1544700" aria-valuemin="0" aria-valuemax="100"><b>Spain - 15447</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 1608100%;" aria-valuenow="1608100" aria-valuemin="0" aria-valuemax="100"><b>Spain - 16081</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Botswana - 1</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>Spain - 52165  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>Spain - 55668  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Botswana - 0</b></div>
               </div>
              </div>

@@ -107,7 +107,16 @@ namespace Covid19Reports.Lib.Publisher
 
             }
 
-            File.WriteAllText(ReportName,template);
+            //Update or overwrite a file only if has changed
+            if (!File.Exists(ReportName))
+                File.WriteAllText(ReportName,template);
+            else
+            {
+                var existingFileContent = File.ReadAllText(ReportName);
+
+                if (!existingFileContent.Equals(template))
+                     File.WriteAllText(ReportName,template);
+            }
         }
 
   

@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Liberia Infections','China Infections'],['03/16',1,74798],['03/17',1,73937],['03/18',2,72280],['03/21',3,74098],['03/22',3,77772],['03/23',3,79314],['03/24',3,75037],['03/25',3,75285],['03/26',3,77242],['03/27',3,76824],['03/28',3,74407],['03/29',3,79694],['03/30',3,78087],['03/31',3,74969],['04/01',6,74190],['04/02',6,78803],['04/03',7,77177],['04/04',10,76022],['04/05',13,77250],['04/06',14,78451],['04/07',14,75853],['04/08',31,75292],['04/09',31,76189]
+          ['Date', 'Liberia Infections','China Infections'],['03/16',1,74798],['03/17',1,73937],['03/18',2,72280],['03/21',3,74098],['03/22',3,77772],['03/23',3,79314],['03/24',3,75037],['03/25',3,75285],['03/26',3,77242],['03/27',3,76824],['03/28',3,74407],['03/29',3,79694],['03/30',3,78087],['03/31',3,74969],['04/01',6,74190],['04/02',6,78803],['04/03',7,77177],['04/04',10,76022],['04/05',13,77250],['04/06',14,78451],['04/07',14,75853],['04/08',31,75292],['04/09',31,76189],['04/10',37,75193]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Liberia Deaths','China Deaths'],['03/16',0,3176],['03/17',0,3166],['03/18',0,3173],['03/21',0,3185],['03/22',0,3221],['03/23',0,3252],['03/24',0,3234],['03/25',0,3210],['03/26',0,3267],['03/27',0,3229],['03/28',0,3235],['03/29',0,3283],['03/30',0,3245],['03/31',0,3228],['04/01',0,3252],['04/02',0,3276],['04/03',0,3272],['04/04',1,3276],['04/05',3,3275],['04/06',3,3320],['04/07',3,3277],['04/08',4,3271],['04/09',4,3283]
+            ['Date', 'Liberia Deaths','China Deaths'],['03/16',0,3176],['03/17',0,3166],['03/18',0,3173],['03/21',0,3185],['03/22',0,3221],['03/23',0,3252],['03/24',0,3234],['03/25',0,3210],['03/26',0,3267],['03/27',0,3229],['03/28',0,3235],['03/29',0,3283],['03/30',0,3245],['03/31',0,3228],['04/01',0,3252],['04/02',0,3276],['04/03',0,3272],['04/04',1,3276],['04/05',3,3275],['04/06',3,3320],['04/07',3,3277],['04/08',4,3271],['04/09',4,3283],['04/10',5,3266]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Liberia Recovery','China Recovery'],['03/16',0,61773],['03/17',0,61788],['03/18',0,61071],['03/21',0,64731],['03/22',0,68769],['03/23',0,70686],['03/24',0,66802],['03/25',0,67484],['03/26',0,69651],['03/27',0,69730],['03/28',0,67624],['03/29',0,73195],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',3,70564],['04/05',3,71956],['04/06',3,73218],['04/07',3,70684],['04/08',3,70182],['04/09',3,71179]
+            ['Date', 'Liberia Recovery','China Recovery'],['03/16',0,61773],['03/17',0,61788],['03/18',0,61071],['03/21',0,64731],['03/22',0,68769],['03/23',0,70686],['03/24',0,66802],['03/25',0,67484],['03/26',0,69651],['03/27',0,69730],['03/28',0,67624],['03/29',0,73195],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',3,70564],['04/05',3,71956],['04/06',3,73218],['04/07',3,70684],['04/08',3,70182],['04/09',3,71179],['04/10',3,70246]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Liberia - China REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 245771%;" aria-valuenow="245771" aria-valuemin="0" aria-valuemax="100"><b>China - 76189</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Liberia - 31</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 203224%;" aria-valuenow="203224" aria-valuemin="0" aria-valuemax="100"><b>China - 75193</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Liberia - 37</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 82075%;" aria-valuenow="82075" aria-valuemin="0" aria-valuemax="100"><b>China - 3283</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Liberia - 4</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 65320%;" aria-valuenow="65320" aria-valuemin="0" aria-valuemax="100"><b>China - 3266</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Liberia - 5</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 2372633%;" aria-valuenow="2372633" aria-valuemin="0" aria-valuemax="100"><b>China - 71179  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 2341533%;" aria-valuenow="2341533" aria-valuemin="0" aria-valuemax="100"><b>China - 70246  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Liberia - 3</b></div>
               </div>
              </div>

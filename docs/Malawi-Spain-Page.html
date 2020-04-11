@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Malawi Infections','Spain Infections'],['04/02',3,112065],['04/03',3,119199],['04/04',4,126168],['04/05',4,131646],['04/06',5,136675],['04/07',8,141942],['04/08',8,148220],['04/09',8,153222]
+          ['Date', 'Malawi Infections','Spain Infections'],['04/02',3,112065],['04/03',3,119199],['04/04',4,126168],['04/05',4,131646],['04/06',5,136675],['04/07',8,141942],['04/08',8,148220],['04/09',8,153222],['04/10',9,158273]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Malawi Deaths','Spain Deaths'],['04/02',0,10348],['04/03',0,11198],['04/04',0,11947],['04/05',0,12641],['04/06',0,13341],['04/07',1,14045],['04/08',1,14792],['04/09',1,15447]
+            ['Date', 'Malawi Deaths','Spain Deaths'],['04/02',0,10348],['04/03',0,11198],['04/04',0,11947],['04/05',0,12641],['04/06',0,13341],['04/07',1,14045],['04/08',1,14792],['04/09',1,15447],['04/10',1,16081]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Malawi Recovery','Spain Recovery'],['04/02',0,26743],['04/03',0,30513],['04/04',0,34219],['04/05',0,38080],['04/06',0,40437],['04/07',0,43208],['04/08',0,48021],['04/09',0,52165]
+            ['Date', 'Malawi Recovery','Spain Recovery'],['04/02',0,26743],['04/03',0,30513],['04/04',0,34219],['04/05',0,38080],['04/06',0,40437],['04/07',0,43208],['04/08',0,48021],['04/09',0,52165],['04/10',0,55668]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Malawi - Spain REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 1915275%;" aria-valuenow="1915275" aria-valuemin="0" aria-valuemax="100"><b>Spain - 153222</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Malawi - 8</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 1758589%;" aria-valuenow="1758589" aria-valuemin="0" aria-valuemax="100"><b>Spain - 158273</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Malawi - 9</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 1544700%;" aria-valuenow="1544700" aria-valuemin="0" aria-valuemax="100"><b>Spain - 15447</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 1608100%;" aria-valuenow="1608100" aria-valuemin="0" aria-valuemax="100"><b>Spain - 16081</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Malawi - 1</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>Spain - 52165  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>Spain - 55668  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Malawi - 0</b></div>
               </div>
              </div>

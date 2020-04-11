@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Uruguay Infections','Spain Infections'],['03/14',4,6391],['03/16',8,9942],['03/17',29,11748],['03/18',50,13910],['03/19',79,17963],['03/20',94,20410],['03/21',110,25374],['03/22',135,28603],['03/23',158,35136],['03/24',162,39885],['03/25',189,49515],['03/26',217,57786],['03/27',238,65719],['03/28',274,73235],['03/29',304,80110],['03/30',310,87956],['03/31',338,95923],['04/01',338,104118],['04/02',350,112065],['04/03',369,119199],['04/04',400,126168],['04/05',400,131646],['04/06',406,136675],['04/07',424,141942],['04/08',424,148220],['04/09',456,153222]
+          ['Date', 'Uruguay Infections','Spain Infections'],['03/14',4,6391],['03/16',8,9942],['03/17',29,11748],['03/18',50,13910],['03/19',79,17963],['03/20',94,20410],['03/21',110,25374],['03/22',135,28603],['03/23',158,35136],['03/24',162,39885],['03/25',189,49515],['03/26',217,57786],['03/27',238,65719],['03/28',274,73235],['03/29',304,80110],['03/30',310,87956],['03/31',338,95923],['04/01',338,104118],['04/02',350,112065],['04/03',369,119199],['04/04',400,126168],['04/05',400,131646],['04/06',406,136675],['04/07',424,141942],['04/08',424,148220],['04/09',456,153222],['04/10',473,158273]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Uruguay Deaths','Spain Deaths'],['03/14',0,195],['03/16',0,342],['03/17',0,533],['03/18',0,623],['03/19',0,830],['03/20',0,1043],['03/21',0,1375],['03/22',0,1756],['03/23',0,2311],['03/24',0,2808],['03/25',0,3647],['03/26',0,4365],['03/27',0,5138],['03/28',0,5982],['03/29',1,6803],['03/30',1,7716],['03/31',1,8464],['04/01',2,9387],['04/02',4,10348],['04/03',4,11198],['04/04',5,11947],['04/05',5,12641],['04/06',6,13341],['04/07',7,14045],['04/08',7,14792],['04/09',7,15447]
+            ['Date', 'Uruguay Deaths','Spain Deaths'],['03/14',0,195],['03/16',0,342],['03/17',0,533],['03/18',0,623],['03/19',0,830],['03/20',0,1043],['03/21',0,1375],['03/22',0,1756],['03/23',0,2311],['03/24',0,2808],['03/25',0,3647],['03/26',0,4365],['03/27',0,5138],['03/28',0,5982],['03/29',1,6803],['03/30',1,7716],['03/31',1,8464],['04/01',2,9387],['04/02',4,10348],['04/03',4,11198],['04/04',5,11947],['04/05',5,12641],['04/06',6,13341],['04/07',7,14045],['04/08',7,14792],['04/09',7,15447],['04/10',7,16081]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Uruguay Recovery','Spain Recovery'],['03/14',0,517],['03/16',0,530],['03/17',0,1028],['03/18',0,1081],['03/19',0,1107],['03/20',0,1588],['03/21',0,2125],['03/22',0,2125],['03/23',0,3355],['03/24',0,3794],['03/25',0,5367],['03/26',0,7015],['03/27',0,9357],['03/28',0,12285],['03/29',0,14709],['03/30',0,16780],['03/31',41,19259],['04/01',41,22647],['04/02',62,26743],['04/03',68,30513],['04/04',93,34219],['04/05',93,38080],['04/06',104,40437],['04/07',150,43208],['04/08',150,48021],['04/09',192,52165]
+            ['Date', 'Uruguay Recovery','Spain Recovery'],['03/14',0,517],['03/16',0,530],['03/17',0,1028],['03/18',0,1081],['03/19',0,1107],['03/20',0,1588],['03/21',0,2125],['03/22',0,2125],['03/23',0,3355],['03/24',0,3794],['03/25',0,5367],['03/26',0,7015],['03/27',0,9357],['03/28',0,12285],['03/29',0,14709],['03/30',0,16780],['03/31',41,19259],['04/01',41,22647],['04/02',62,26743],['04/03',68,30513],['04/04',93,34219],['04/05',93,38080],['04/06',104,40437],['04/07',150,43208],['04/08',150,48021],['04/09',192,52165],['04/10',206,55668]
         ]);
 
         var options = {
@@ -107,19 +107,22 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Uruguay - Spain REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 33601%;" aria-valuenow="33601" aria-valuemin="0" aria-valuemax="100"><b>Spain - 153222</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Uruguay - 456</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 33462%;" aria-valuenow="33462" aria-valuemin="0" aria-valuemax="100"><b>Spain - 158273</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Uruguay - 473</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 220671%;" aria-valuenow="220671" aria-valuemin="0" aria-valuemax="100"><b>Spain - 15447</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 229729%;" aria-valuenow="229729" aria-valuemin="0" aria-valuemax="100"><b>Spain - 16081</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Uruguay - 7</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 27169%;" aria-valuenow="27169" aria-valuemin="0" aria-valuemax="100"><b>Spain - 52165  </b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Uruguay - 192</b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 27023%;" aria-valuenow="27023" aria-valuemin="0" aria-valuemax="100"><b>Spain - 55668  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Uruguay - 206</b></div>
               </div>
              </div>
           </div>

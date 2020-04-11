@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Belize Infections','China Infections'],['03/23',1,79314],['03/24',1,75037],['03/25',2,75285],['03/26',2,77242],['03/27',2,76824],['03/28',2,74407],['03/29',2,79694],['03/30',3,78087],['03/31',3,74969],['04/01',3,74190],['04/02',3,78803],['04/03',4,77177],['04/04',4,76022],['04/05',5,77250],['04/06',7,78451],['04/07',7,75853],['04/08',8,75292],['04/09',9,76189]
+          ['Date', 'Belize Infections','China Infections'],['03/23',1,79314],['03/24',1,75037],['03/25',2,75285],['03/26',2,77242],['03/27',2,76824],['03/28',2,74407],['03/29',2,79694],['03/30',3,78087],['03/31',3,74969],['04/01',3,74190],['04/02',3,78803],['04/03',4,77177],['04/04',4,76022],['04/05',5,77250],['04/06',7,78451],['04/07',7,75853],['04/08',8,75292],['04/09',9,76189],['04/10',10,75193]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Belize Deaths','China Deaths'],['03/23',0,3252],['03/24',0,3234],['03/25',0,3210],['03/26',0,3267],['03/27',0,3229],['03/28',0,3235],['03/29',0,3283],['03/30',0,3245],['03/31',0,3228],['04/01',0,3252],['04/02',0,3276],['04/03',0,3272],['04/04',0,3276],['04/05',0,3275],['04/06',1,3320],['04/07',1,3277],['04/08',1,3271],['04/09',1,3283]
+            ['Date', 'Belize Deaths','China Deaths'],['03/23',0,3252],['03/24',0,3234],['03/25',0,3210],['03/26',0,3267],['03/27',0,3229],['03/28',0,3235],['03/29',0,3283],['03/30',0,3245],['03/31',0,3228],['04/01',0,3252],['04/02',0,3276],['04/03',0,3272],['04/04',0,3276],['04/05',0,3275],['04/06',1,3320],['04/07',1,3277],['04/08',1,3271],['04/09',1,3283],['04/10',2,3266]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Belize Recovery','China Recovery'],['03/23',0,70686],['03/24',0,66802],['03/25',0,67484],['03/26',0,69651],['03/27',0,69730],['03/28',0,67624],['03/29',0,73195],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',0,70564],['04/05',0,71956],['04/06',0,73218],['04/07',0,70684],['04/08',0,70182],['04/09',0,71179]
+            ['Date', 'Belize Recovery','China Recovery'],['03/23',0,70686],['03/24',0,66802],['03/25',0,67484],['03/26',0,69651],['03/27',0,69730],['03/28',0,67624],['03/29',0,73195],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',0,70564],['04/05',0,71956],['04/06',0,73218],['04/07',0,70684],['04/08',0,70182],['04/09',0,71179],['04/10',0,70246]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Belize - China REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 846544%;" aria-valuenow="846544" aria-valuemin="0" aria-valuemax="100"><b>China - 76189</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Belize - 9</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 751930%;" aria-valuenow="751930" aria-valuemin="0" aria-valuemax="100"><b>China - 75193</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Belize - 10</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 328300%;" aria-valuenow="328300" aria-valuemin="0" aria-valuemax="100"><b>China - 3283</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Belize - 1</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 163300%;" aria-valuenow="163300" aria-valuemin="0" aria-valuemax="100"><b>China - 3266</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Belize - 2</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>China - 71179  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>China - 70246  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Belize - 0</b></div>
               </div>
              </div>

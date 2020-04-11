@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Guatemala Infections','Italy Infections'],['03/14',1,24747],['03/16',2,27980],['03/17',6,31506],['03/19',9,41035],['03/20',12,47021],['03/21',17,53578],['03/22',19,59138],['03/23',20,63927],['03/24',21,69176],['03/25',24,74386],['03/26',25,80589],['03/27',28,86498],['03/28',34,92472],['03/29',34,97689],['03/30',36,101739],['03/31',38,105792],['04/01',39,110574],['04/02',47,115242],['04/03',50,119827],['04/04',61,124632],['04/05',61,128948],['04/06',70,132547],['04/07',77,135586],['04/08',87,139422],['04/09',95,143626]
+          ['Date', 'Guatemala Infections','Italy Infections'],['03/14',1,24747],['03/16',2,27980],['03/17',6,31506],['03/19',9,41035],['03/20',12,47021],['03/21',17,53578],['03/22',19,59138],['03/23',20,63927],['03/24',21,69176],['03/25',24,74386],['03/26',25,80589],['03/27',28,86498],['03/28',34,92472],['03/29',34,97689],['03/30',36,101739],['03/31',38,105792],['04/01',39,110574],['04/02',47,115242],['04/03',50,119827],['04/04',61,124632],['04/05',61,128948],['04/06',70,132547],['04/07',77,135586],['04/08',87,139422],['04/09',95,143626],['04/10',126,147577]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Guatemala Deaths','Italy Deaths'],['03/14',0,1809],['03/16',1,2158],['03/17',1,2503],['03/19',1,3405],['03/20',1,4032],['03/21',1,4825],['03/22',1,5476],['03/23',1,6077],['03/24',1,6820],['03/25',1,7503],['03/26',1,8215],['03/27',1,9134],['03/28',1,10023],['03/29',1,10779],['03/30',1,11591],['03/31',1,12428],['04/01',1,13155],['04/02',1,13915],['04/03',1,14681],['04/04',2,15362],['04/05',2,15887],['04/06',3,16523],['04/07',3,17127],['04/08',3,17669],['04/09',3,18279]
+            ['Date', 'Guatemala Deaths','Italy Deaths'],['03/14',0,1809],['03/16',1,2158],['03/17',1,2503],['03/19',1,3405],['03/20',1,4032],['03/21',1,4825],['03/22',1,5476],['03/23',1,6077],['03/24',1,6820],['03/25',1,7503],['03/26',1,8215],['03/27',1,9134],['03/28',1,10023],['03/29',1,10779],['03/30',1,11591],['03/31',1,12428],['04/01',1,13155],['04/02',1,13915],['04/03',1,14681],['04/04',2,15362],['04/05',2,15887],['04/06',3,16523],['04/07',3,17127],['04/08',3,17669],['04/09',3,18279],['04/10',3,18849]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Guatemala Recovery','Italy Recovery'],['03/14',0,2335],['03/16',0,2749],['03/17',0,2941],['03/19',0,4440],['03/20',0,4440],['03/21',0,6072],['03/22',0,7024],['03/23',0,7432],['03/24',0,8326],['03/25',4,9362],['03/26',4,10361],['03/27',4,10950],['03/28',10,12384],['03/29',10,13030],['03/30',10,14620],['03/31',12,15729],['04/01',12,16847],['04/02',12,18278],['04/03',12,19758],['04/04',15,20996],['04/05',15,21815],['04/06',15,22837],['04/07',17,24392],['04/08',17,26491],['04/09',17,28470]
+            ['Date', 'Guatemala Recovery','Italy Recovery'],['03/14',0,2335],['03/16',0,2749],['03/17',0,2941],['03/19',0,4440],['03/20',0,4440],['03/21',0,6072],['03/22',0,7024],['03/23',0,7432],['03/24',0,8326],['03/25',4,9362],['03/26',4,10361],['03/27',4,10950],['03/28',10,12384],['03/29',10,13030],['03/30',10,14620],['03/31',12,15729],['04/01',12,16847],['04/02',12,18278],['04/03',12,19758],['04/04',15,20996],['04/05',15,21815],['04/06',15,22837],['04/07',17,24392],['04/08',17,26491],['04/09',17,28470],['04/10',17,30455]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Guatemala - Italy REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 151185%;" aria-valuenow="151185" aria-valuemin="0" aria-valuemax="100"><b>Italy - 143626</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Guatemala - 95</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 117125%;" aria-valuenow="117125" aria-valuemin="0" aria-valuemax="100"><b>Italy - 147577</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Guatemala - 126</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 609300%;" aria-valuenow="609300" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18279</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 628300%;" aria-valuenow="628300" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18849</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Guatemala - 3</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 167471%;" aria-valuenow="167471" aria-valuemin="0" aria-valuemax="100"><b>Italy - 28470  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 179147%;" aria-valuenow="179147" aria-valuemin="0" aria-valuemax="100"><b>Italy - 30455  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Guatemala - 17</b></div>
               </div>
              </div>

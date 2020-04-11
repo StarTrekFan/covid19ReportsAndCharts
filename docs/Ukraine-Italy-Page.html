@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Ukraine Infections','Italy Infections'],['03/03',1,2502],['03/11',3,30122],['03/16',7,27980],['03/17',14,31506],['03/19',16,41035],['03/20',29,47021],['03/21',47,53578],['03/22',73,59138],['03/23',73,63927],['03/24',97,69176],['03/25',145,74386],['03/26',196,80589],['03/27',310,86498],['03/28',356,92472],['03/29',475,97689],['03/30',548,101739],['03/31',645,105792],['04/01',794,110574],['04/02',897,115242],['04/03',1072,119827],['04/04',1225,124632],['04/05',1308,128948],['04/06',1319,132547],['04/07',1462,135586],['04/08',1668,139422],['04/09',1892,143626]
+          ['Date', 'Ukraine Infections','Italy Infections'],['03/03',1,2502],['03/11',3,30122],['03/16',7,27980],['03/17',14,31506],['03/19',16,41035],['03/20',29,47021],['03/21',47,53578],['03/22',73,59138],['03/23',73,63927],['03/24',97,69176],['03/25',145,74386],['03/26',196,80589],['03/27',310,86498],['03/28',356,92472],['03/29',475,97689],['03/30',548,101739],['03/31',645,105792],['04/01',794,110574],['04/02',897,115242],['04/03',1072,119827],['04/04',1225,124632],['04/05',1308,128948],['04/06',1319,132547],['04/07',1462,135586],['04/08',1668,139422],['04/09',1892,143626],['04/10',2203,147577]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Ukraine Deaths','Italy Deaths'],['03/03',0,79],['03/11',1,2093],['03/16',1,2158],['03/17',2,2503],['03/19',2,3405],['03/20',3,4032],['03/21',3,4825],['03/22',3,5476],['03/23',3,6077],['03/24',3,6820],['03/25',5,7503],['03/26',5,8215],['03/27',5,9134],['03/28',9,10023],['03/29',10,10779],['03/30',13,11591],['03/31',17,12428],['04/01',20,13155],['04/02',22,13915],['04/03',27,14681],['04/04',32,15362],['04/05',37,15887],['04/06',38,16523],['04/07',45,17127],['04/08',52,17669],['04/09',57,18279]
+            ['Date', 'Ukraine Deaths','Italy Deaths'],['03/03',0,79],['03/11',1,2093],['03/16',1,2158],['03/17',2,2503],['03/19',2,3405],['03/20',3,4032],['03/21',3,4825],['03/22',3,5476],['03/23',3,6077],['03/24',3,6820],['03/25',5,7503],['03/26',5,8215],['03/27',5,9134],['03/28',9,10023],['03/29',10,10779],['03/30',13,11591],['03/31',17,12428],['04/01',20,13155],['04/02',22,13915],['04/03',27,14681],['04/04',32,15362],['04/05',37,15887],['04/06',38,16523],['04/07',45,17127],['04/08',52,17669],['04/09',57,18279],['04/10',69,18849]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Ukraine Recovery','Italy Recovery'],['03/03',0,160],['03/11',0,2484],['03/16',0,2749],['03/17',0,2941],['03/19',0,4440],['03/20',0,4440],['03/21',1,6072],['03/22',1,7024],['03/23',1,7432],['03/24',1,8326],['03/25',1,9362],['03/26',1,10361],['03/27',5,10950],['03/28',5,12384],['03/29',6,13030],['03/30',8,14620],['03/31',10,15729],['04/01',13,16847],['04/02',19,18278],['04/03',22,19758],['04/04',25,20996],['04/05',28,21815],['04/06',28,22837],['04/07',28,24392],['04/08',35,26491],['04/09',45,28470]
+            ['Date', 'Ukraine Recovery','Italy Recovery'],['03/03',0,160],['03/11',0,2484],['03/16',0,2749],['03/17',0,2941],['03/19',0,4440],['03/20',0,4440],['03/21',1,6072],['03/22',1,7024],['03/23',1,7432],['03/24',1,8326],['03/25',1,9362],['03/26',1,10361],['03/27',5,10950],['03/28',5,12384],['03/29',6,13030],['03/30',8,14620],['03/31',10,15729],['04/01',13,16847],['04/02',19,18278],['04/03',22,19758],['04/04',25,20996],['04/05',28,21815],['04/06',28,22837],['04/07',28,24392],['04/08',35,26491],['04/09',45,28470],['04/10',61,30455]
         ]);
 
         var options = {
@@ -107,19 +107,22 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Ukraine - Italy REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 7591%;" aria-valuenow="7591" aria-valuemin="0" aria-valuemax="100"><b>Italy - 143626</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Ukraine - 1892</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 6699%;" aria-valuenow="6699" aria-valuemin="0" aria-valuemax="100"><b>Italy - 147577</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Ukraine - 2203</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 32068%;" aria-valuenow="32068" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18279</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Ukraine - 57</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 27317%;" aria-valuenow="27317" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18849</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Ukraine - 69</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 63267%;" aria-valuenow="63267" aria-valuemin="0" aria-valuemax="100"><b>Italy - 28470  </b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Ukraine - 45</b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 49926%;" aria-valuenow="49926" aria-valuemin="0" aria-valuemax="100"><b>Italy - 30455  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Ukraine - 61</b></div>
               </div>
              </div>
           </div>

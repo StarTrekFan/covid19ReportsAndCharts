@@ -80,7 +80,15 @@ namespace Covid19Reports.Lib.Publisher
                 template = template.Replace("NONRECOVEREDPROGRESSBARWIDTH",(100 - recoveryProgressBarWidth).ToString());
 
 
-                File.WriteAllText(reportName,template);
+               //Update or overwrite a file only if has changed
+                if (!File.Exists(reportName))
+                    File.WriteAllText(reportName,template);
+                else
+                {
+                    var existingFileContent = File.ReadAllText(reportName);
+                    if (!existingFileContent.Equals(template))
+                        File.WriteAllText(reportName,template);
+                }
 
 
 

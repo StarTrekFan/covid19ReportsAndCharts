@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Mauritius Infections','Italy Infections'],['03/18',3,35713],['03/19',3,41035],['03/20',12,47021],['03/21',14,53578],['03/22',28,59138],['03/23',36,63927],['03/24',42,69176],['03/25',48,74386],['03/26',81,80589],['03/27',94,86498],['03/28',102,92472],['03/29',107,97689],['03/30',128,101739],['03/31',143,105792],['04/01',161,110574],['04/02',169,115242],['04/03',186,119827],['04/04',196,124632],['04/05',227,128948],['04/06',244,132547],['04/07',268,135586],['04/08',273,139422],['04/09',314,143626]
+          ['Date', 'Mauritius Infections','Italy Infections'],['03/18',3,35713],['03/19',3,41035],['03/20',12,47021],['03/21',14,53578],['03/22',28,59138],['03/23',36,63927],['03/24',42,69176],['03/25',48,74386],['03/26',81,80589],['03/27',94,86498],['03/28',102,92472],['03/29',107,97689],['03/30',128,101739],['03/31',143,105792],['04/01',161,110574],['04/02',169,115242],['04/03',186,119827],['04/04',196,124632],['04/05',227,128948],['04/06',244,132547],['04/07',268,135586],['04/08',273,139422],['04/09',314,143626],['04/10',318,147577]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Mauritius Deaths','Italy Deaths'],['03/18',0,2978],['03/19',0,3405],['03/20',0,4032],['03/21',1,4825],['03/22',2,5476],['03/23',2,6077],['03/24',2,6820],['03/25',2,7503],['03/26',2,8215],['03/27',2,9134],['03/28',2,10023],['03/29',3,10779],['03/30',3,11591],['03/31',5,12428],['04/01',6,13155],['04/02',7,13915],['04/03',7,14681],['04/04',7,15362],['04/05',7,15887],['04/06',7,16523],['04/07',7,17127],['04/08',7,17669],['04/09',7,18279]
+            ['Date', 'Mauritius Deaths','Italy Deaths'],['03/18',0,2978],['03/19',0,3405],['03/20',0,4032],['03/21',1,4825],['03/22',2,5476],['03/23',2,6077],['03/24',2,6820],['03/25',2,7503],['03/26',2,8215],['03/27',2,9134],['03/28',2,10023],['03/29',3,10779],['03/30',3,11591],['03/31',5,12428],['04/01',6,13155],['04/02',7,13915],['04/03',7,14681],['04/04',7,15362],['04/05',7,15887],['04/06',7,16523],['04/07',7,17127],['04/08',7,17669],['04/09',7,18279],['04/10',9,18849]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Mauritius Recovery','Italy Recovery'],['03/18',0,4025],['03/19',0,4440],['03/20',0,4440],['03/21',0,6072],['03/22',0,7024],['03/23',0,7432],['03/24',0,8326],['03/25',0,9362],['03/26',0,10361],['03/27',0,10950],['03/28',0,12384],['03/29',0,13030],['03/30',0,14620],['03/31',0,15729],['04/01',0,16847],['04/02',0,18278],['04/03',0,19758],['04/04',7,20996],['04/05',7,21815],['04/06',7,22837],['04/07',8,24392],['04/08',19,26491],['04/09',23,28470]
+            ['Date', 'Mauritius Recovery','Italy Recovery'],['03/18',0,4025],['03/19',0,4440],['03/20',0,4440],['03/21',0,6072],['03/22',0,7024],['03/23',0,7432],['03/24',0,8326],['03/25',0,9362],['03/26',0,10361],['03/27',0,10950],['03/28',0,12384],['03/29',0,13030],['03/30',0,14620],['03/31',0,15729],['04/01',0,16847],['04/02',0,18278],['04/03',0,19758],['04/04',7,20996],['04/05',7,21815],['04/06',7,22837],['04/07',8,24392],['04/08',19,26491],['04/09',23,28470],['04/10',23,30455]
         ]);
 
         var options = {
@@ -107,18 +107,21 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Mauritius - Italy REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 45741%;" aria-valuenow="45741" aria-valuemin="0" aria-valuemax="100"><b>Italy - 143626</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Mauritius - 314</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 46408%;" aria-valuenow="46408" aria-valuemin="0" aria-valuemax="100"><b>Italy - 147577</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Mauritius - 318</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 261129%;" aria-valuenow="261129" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18279</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Mauritius - 7</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 209433%;" aria-valuenow="209433" aria-valuemin="0" aria-valuemax="100"><b>Italy - 18849</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Mauritius - 9</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 123783%;" aria-valuenow="123783" aria-valuemin="0" aria-valuemax="100"><b>Italy - 28470  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 132413%;" aria-valuenow="132413" aria-valuemin="0" aria-valuemax="100"><b>Italy - 30455  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Mauritius - 23</b></div>
               </div>
              </div>

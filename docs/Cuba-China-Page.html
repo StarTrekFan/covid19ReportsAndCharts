@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Cuba Infections','China Infections'],['03/11',4,80921],['03/12',3,78003],['03/17',5,73937],['03/18',7,72280],['03/19',11,73759],['03/20',16,75039],['03/21',21,74098],['03/22',35,77772],['03/23',40,79314],['03/24',48,75037],['03/25',57,75285],['03/26',67,77242],['03/27',80,76824],['03/28',119,74407],['03/29',139,79694],['03/30',170,78087],['03/31',186,74969],['04/01',212,74190],['04/02',233,78803],['04/03',269,77177],['04/04',288,76022],['04/05',320,77250],['04/06',350,78451],['04/07',396,75853],['04/08',457,75292],['04/09',515,76189]
+          ['Date', 'Cuba Infections','China Infections'],['03/11',4,80921],['03/12',3,78003],['03/17',5,73937],['03/18',7,72280],['03/19',11,73759],['03/20',16,75039],['03/21',21,74098],['03/22',35,77772],['03/23',40,79314],['03/24',48,75037],['03/25',57,75285],['03/26',67,77242],['03/27',80,76824],['03/28',119,74407],['03/29',139,79694],['03/30',170,78087],['03/31',186,74969],['04/01',212,74190],['04/02',233,78803],['04/03',269,77177],['04/04',288,76022],['04/05',320,77250],['04/06',350,78451],['04/07',396,75853],['04/08',457,75292],['04/09',515,76189],['04/10',564,75193]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Cuba Deaths','China Deaths'],['03/11',0,3161],['03/12',0,3137],['03/17',0,3166],['03/18',1,3173],['03/19',1,3185],['03/20',1,3197],['03/21',1,3185],['03/22',1,3221],['03/23',1,3252],['03/24',1,3234],['03/25',1,3210],['03/26',2,3267],['03/27',2,3229],['03/28',3,3235],['03/29',3,3283],['03/30',4,3245],['03/31',6,3228],['04/01',6,3252],['04/02',6,3276],['04/03',6,3272],['04/04',6,3276],['04/05',8,3275],['04/06',9,3320],['04/07',11,3277],['04/08',12,3271],['04/09',15,3283]
+            ['Date', 'Cuba Deaths','China Deaths'],['03/11',0,3161],['03/12',0,3137],['03/17',0,3166],['03/18',1,3173],['03/19',1,3185],['03/20',1,3197],['03/21',1,3185],['03/22',1,3221],['03/23',1,3252],['03/24',1,3234],['03/25',1,3210],['03/26',2,3267],['03/27',2,3229],['03/28',3,3235],['03/29',3,3283],['03/30',4,3245],['03/31',6,3228],['04/01',6,3252],['04/02',6,3276],['04/03',6,3272],['04/04',6,3276],['04/05',8,3275],['04/06',9,3320],['04/07',11,3277],['04/08',12,3271],['04/09',15,3283],['04/10',15,3266]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Cuba Recovery','China Recovery'],['03/11',0,61644],['03/12',0,60054],['03/17',0,61788],['03/18',0,61071],['03/19',0,63217],['03/20',0,65120],['03/21',0,64731],['03/22',0,68769],['03/23',0,70686],['03/24',1,66802],['03/25',1,67484],['03/26',1,69651],['03/27',4,69730],['03/28',4,67624],['03/29',4,73195],['03/30',4,71873],['03/31',8,69018],['04/01',12,68260],['04/02',13,73101],['04/03',15,71511],['04/04',15,70564],['04/05',15,71956],['04/06',18,73218],['04/07',27,70684],['04/08',27,70182],['04/09',28,71179]
+            ['Date', 'Cuba Recovery','China Recovery'],['03/11',0,61644],['03/12',0,60054],['03/17',0,61788],['03/18',0,61071],['03/19',0,63217],['03/20',0,65120],['03/21',0,64731],['03/22',0,68769],['03/23',0,70686],['03/24',1,66802],['03/25',1,67484],['03/26',1,69651],['03/27',4,69730],['03/28',4,67624],['03/29',4,73195],['03/30',4,71873],['03/31',8,69018],['04/01',12,68260],['04/02',13,73101],['04/03',15,71511],['04/04',15,70564],['04/05',15,71956],['04/06',18,73218],['04/07',27,70684],['04/08',27,70182],['04/09',28,71179],['04/10',51,70246]
         ]);
 
         var options = {
@@ -107,19 +107,22 @@ code {
           <div class="row justify-content-md-center">
             <H3><b>COVID-19 Cuba - China REPORT</b></H3>
           </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 14794%;" aria-valuenow="14794" aria-valuemin="0" aria-valuemax="100"><b>China - 76189</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Cuba - 515</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 13332%;" aria-valuenow="13332" aria-valuemin="0" aria-valuemax="100"><b>China - 75193</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Cuba - 564</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 21887%;" aria-valuenow="21887" aria-valuemin="0" aria-valuemax="100"><b>China - 3283</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 21773%;" aria-valuenow="21773" aria-valuemin="0" aria-valuemax="100"><b>China - 3266</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Cuba - 15</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 254211%;" aria-valuenow="254211" aria-valuemin="0" aria-valuemax="100"><b>China - 71179  </b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Cuba - 28</b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 137737%;" aria-valuenow="137737" aria-valuemin="0" aria-valuemax="100"><b>China - 70246  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Cuba - 51</b></div>
               </div>
              </div>
           </div>
