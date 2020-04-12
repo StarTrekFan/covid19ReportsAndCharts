@@ -9,18 +9,31 @@ namespace Covid19Reports.Lib
 {
     public class VirusTrackerDataParser
     {
-        public List<VirusTrackerItem> VirusTrackerItems {get;set;}
-        public VirusTrackerDataParser(string trackerFile)
+ 
+        private string _trackerFile;
+        private Dictionary<string,List<string>> CsvHeaderMappings {get;set;}
+
+        private List<VirusTrackerItem> _virusTrackerItems;
+
+        public VirusTrackerDataParser(string trackerFile,Dictionary<string,List<string>> csvHeaderMappings)
         {
             if (trackerFile == null)
                 throw new Exception("Tracker File is not valid");
 
             if (!File.Exists(trackerFile))
                 throw new Exception("Tracker File is invalid");
+            
+            _trackerFile = trackerFile;
 
-            VirusTrackerItems = new List<VirusTrackerItem>();
+            CsvHeaderMappings = csvHeaderMappings;
 
-            using (var reader = new StreamReader(trackerFile))
+            _virusTrackerItems = new List<VirusTrackerItem>();
+        
+        }
+
+        public List<VirusTrackerItem> GetVirusTrackerItems()
+        {
+            using (var reader = new StreamReader(_trackerFile))
             {
                 using (var csv = new CsvReader(reader,CultureInfo.InvariantCulture))
                 {
@@ -40,8 +53,8 @@ namespace Covid19Reports.Lib
 
                 }
             }
+            return _virusTrackerItems;
         }
-
         private VirusTrackerItem GetVirusTrackerItem(dynamic record)
         {
              var dataItem = (IDictionary<string, object>) record;
@@ -60,11 +73,11 @@ namespace Covid19Reports.Lib
         }
         private void AddVirusTrackerItem(VirusTrackerItem virusTrackerItem)
         {
-            if (!VirusTrackerItems.Any(item => item.Country.Equals(virusTrackerItem.Country) && item.ProvinceOrState.Equals(virusTrackerItem.ProvinceOrState) && item.StatusDate.Equals(virusTrackerItem.StatusDate)))
-                VirusTrackerItems.Add(virusTrackerItem);
+            if (!_virusTrackerItems.Any(item => item.Country.Equals(virusTrackerItem.Country) && item.ProvinceOrState.Equals(virusTrackerItem.ProvinceOrState) && item.StatusDate.Equals(virusTrackerItem.StatusDate)))
+                _virusTrackerItems.Add(virusTrackerItem);
             else
             {
-                var existingVirusTrackerItem = VirusTrackerItems.First(item => item.Country.Equals(virusTrackerItem.Country) && item.ProvinceOrState.Equals(virusTrackerItem.ProvinceOrState) && item.StatusDate.Equals(virusTrackerItem.StatusDate));
+                var existingVirusTrackerItem = _virusTrackerItems.First(item => item.Country.Equals(virusTrackerItem.Country) && item.ProvinceOrState.Equals(virusTrackerItem.ProvinceOrState) && item.StatusDate.Equals(virusTrackerItem.StatusDate));
 
                 existingVirusTrackerItem.Infections += virusTrackerItem.Infections;
 
@@ -74,16 +87,16 @@ namespace Covid19Reports.Lib
             }
         }
 
-        private static string GetData(string columnName,IDictionary<string, object> dynamicRecord)
+        private  string GetData(string columnName,IDictionary<string, object> dynamicRecord)
         {
             string returnValue = null;
 
-            if (GetColumnHeaders()[columnName].Count() == 1)
-                returnValue = dynamicRecord[GetColumnHeaders()[columnName].First()].ToString();
+            if (CsvHeaderMappings[columnName].Count() == 1)
+                returnValue = dynamicRecord[CsvHeaderMappings[columnName].First()].ToString();
 
             if (string.IsNullOrEmpty(returnValue))
             {
-                var columnHeaders = GetColumnHeaders()[columnName];
+                var columnHeaders = CsvHeaderMappings[columnName];
 
                 foreach(var columnHeader in columnHeaders)
                 {
@@ -95,19 +108,6 @@ namespace Covid19Reports.Lib
             return  returnValue;
         }
    
-        private static Dictionary<string,List<string>> GetColumnHeaders()
-        {
-            var columnHeaders = new Dictionary<string,List<string>>()
-            {
-                {"Country", new List<string>() {"Country/Region","Country_Region"}},
-                {"ProvinceOrState", new List<string>() {"Province/State","Province_State"}},
-                {"StatusDate", new List<string>() {"Last Update","Last_Update"}},
-                {"Infections", new List<string>() {"Confirmed"}},
-                {"Deaths", new List<string>() {"Deaths",""}},
-                {"Recovery", new List<string>() {"Recovered"}}
-            };
-
-            return columnHeaders;
-        }
+      
     }
 }

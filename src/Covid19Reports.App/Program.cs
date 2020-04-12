@@ -103,6 +103,8 @@ namespace Covid19Reports.App
 
             dataConsolidator.ProvinceOrStateMapping = GetProvinceOrStateMappings();
 
+            dataConsolidator.CsvHeaderMappings = GetCsvHeaderMappings();
+            
             dataConsolidator.ConsolidateData();
 
             return dataConsolidator.VirusTrackerItems;
@@ -156,6 +158,11 @@ namespace Covid19Reports.App
         private static List<string> GetCountriesToCompare()
         {
             return ConfigRoot.GetSection("CountriesToCompare").Get<List<string>>();
+        }
+
+        private static Dictionary<string,List<string>> GetCsvHeaderMappings()
+        {
+            return ConfigRoot.GetSection("CSVHeaderMappings").Get<Dictionary<string,List<string>>>();
         }
 
         private static List<Covid19ReportPublisher> CountryReportPublishers

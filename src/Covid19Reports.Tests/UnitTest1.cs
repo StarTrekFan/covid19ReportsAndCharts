@@ -15,15 +15,19 @@ namespace Covid19Reports.Tests
         {
             var virusTrackerDataFile = @"TestData\03-01-2020-Format1.csv";
 
-            var parser = new VirusTrackerDataParser(virusTrackerDataFile);
+             var csvHeaderMappings = GetCsvHeaderMappings();
 
-            var numRecords = parser.VirusTrackerItems.Count;
+            var parser = new VirusTrackerDataParser(virusTrackerDataFile,csvHeaderMappings);
 
-            var numInfectionsUS = parser.VirusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Infections);
+            var virusTrackerItems = parser.GetVirusTrackerItems();
 
-            var numDeathsUS = parser.VirusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Deaths);
+            var numRecords = virusTrackerItems.Count;
 
-            var numRecoveryUS = parser.VirusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Recovery);
+            var numInfectionsUS = virusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Infections);
+
+            var numDeathsUS = virusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Deaths);
+
+            var numRecoveryUS = virusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Recovery);
 
             Assert.True(numRecords > 0);
             Assert.True(numInfectionsUS == 76);
@@ -36,15 +40,19 @@ namespace Covid19Reports.Tests
         {
             var virusTrackerDataFile = @"TestData\03-29-2020-Format2.csv";
 
-            var parser = new VirusTrackerDataParser(virusTrackerDataFile);
+            var csvHeaderMappings = GetCsvHeaderMappings();
 
-             var numRecords = parser.VirusTrackerItems.Count;
+            var parser = new VirusTrackerDataParser(virusTrackerDataFile,csvHeaderMappings);
 
-            var numInfectionsUS = parser.VirusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Infections);
+            var virusTrackerItems = parser.GetVirusTrackerItems();
+            
+            var numRecords = virusTrackerItems.Count;
 
-            var numDeathsUS = parser.VirusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Deaths);
+            var numInfectionsUS = virusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Infections);
 
-            var numRecoveryUS = parser.VirusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Recovery);
+            var numDeathsUS = virusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Deaths);
+
+            var numRecoveryUS = virusTrackerItems.Where(item => item.Country == "US").Sum(item => item.Recovery);
 
             Assert.True(numRecords > 0);
             Assert.True(numInfectionsUS == 140909);
@@ -59,11 +67,13 @@ namespace Covid19Reports.Tests
 
             var virusTrackerItems = new List<VirusTrackerItem>();
 
+            var csvHeaderMappings = GetCsvHeaderMappings();
+
             trackerFiles.ForEach(trackerFile =>{
                     
-                var parser = new VirusTrackerDataParser(trackerFile);
+                var parser = new VirusTrackerDataParser(trackerFile,csvHeaderMappings);
 
-                virusTrackerItems.AddRange(parser.VirusTrackerItems);
+                virusTrackerItems.AddRange(parser.GetVirusTrackerItems());
             });
 
             using (var writer = new StreamWriter("ConsolidatedReport.csv"))
@@ -89,5 +99,21 @@ namespace Covid19Reports.Tests
 
             Assert.True(virusTrackerItems.Count > 0);
         }
+        
+        private  Dictionary<string,List<string>> GetCsvHeaderMappings()
+        {
+            var columnHeaders = new Dictionary<string,List<string>>()
+            {
+                {"Country", new List<string>() {"Country/Region","Country_Region"}},
+                {"ProvinceOrState", new List<string>() {"Province/State","Province_State"}},
+                {"StatusDate", new List<string>() {"Last Update","Last_Update"}},
+                {"Infections", new List<string>() {"Confirmed"}},
+                {"Deaths", new List<string>() {"Deaths",""}},
+                {"Recovery", new List<string>() {"Recovered"}}
+            };
+
+            return columnHeaders;
+        }
+        
     }
 }

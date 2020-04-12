@@ -48,6 +48,8 @@ namespace Covid19Reports.Lib
         //This is the final consolidated list of VirusTrackerItems.
         public List<VirusTrackerItem> VirusTrackerItems {get;set;}
 
+        //This is to handle the different header names in the CSV file for the same data
+        public Dictionary<string,List<string>> CsvHeaderMappings {get;set;}
         public void ConsolidateData()
         {
             ValidateInputs();
@@ -111,9 +113,9 @@ namespace Covid19Reports.Lib
         }
         private List<VirusTrackerItem> GetVirusTrackerItems(string trackerFile)
         {
-            var parser = new VirusTrackerDataParser(trackerFile);
+            var parser = new VirusTrackerDataParser(trackerFile,CsvHeaderMappings);
 
-            return parser.VirusTrackerItems;
+            return parser.GetVirusTrackerItems();
         }
 
         private void UpdateTrackerItem(VirusTrackerItem virusTrackerItem, VirusTrackerItem existingVirusTrackerItem )
