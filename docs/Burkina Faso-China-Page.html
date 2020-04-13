@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Burkina Faso Infections','China Infections'],['03/10',1,77201],['03/11',4,80921],['03/16',15,74798],['03/18',20,72280],['03/19',33,73759],['03/20',40,75039],['03/21',64,74098],['03/22',75,77772],['03/23',99,79314],['03/24',114,75037],['03/25',146,75285],['03/26',152,77242],['03/27',180,76824],['03/28',207,74407],['03/29',222,79694],['03/30',246,78087],['03/31',261,74969],['04/01',282,74190],['04/02',288,78803],['04/03',302,77177],['04/04',318,76022],['04/05',345,77250],['04/06',364,78451],['04/07',384,75853],['04/08',414,75292],['04/09',443,76189],['04/10',443,75193]
+          ['Date', 'Burkina Faso Infections','China Infections'],['03/10',1,77201],['03/11',4,80921],['03/16',15,74798],['03/18',20,72280],['03/19',33,73759],['03/20',40,75039],['03/21',64,74098],['03/22',75,77772],['03/23',99,79314],['03/24',114,75037],['03/25',146,75285],['03/26',152,77242],['03/27',180,76824],['03/28',207,74407],['03/29',222,79694],['03/30',246,78087],['03/31',261,74969],['04/01',282,74190],['04/02',288,78803],['04/03',302,77177],['04/04',318,76022],['04/05',345,77250],['04/06',364,78451],['04/07',384,75853],['04/08',414,75292],['04/09',443,77646],['04/10',443,76130],['04/11',484,78919],['04/12',497,76448]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Burkina Faso Deaths','China Deaths'],['03/10',0,3088],['03/11',0,3161],['03/16',0,3176],['03/18',1,3173],['03/19',1,3185],['03/20',1,3197],['03/21',2,3185],['03/22',4,3221],['03/23',4,3252],['03/24',4,3234],['03/25',4,3210],['03/26',7,3267],['03/27',9,3229],['03/28',11,3235],['03/29',12,3283],['03/30',12,3245],['03/31',14,3228],['04/01',16,3252],['04/02',16,3276],['04/03',16,3272],['04/04',16,3276],['04/05',17,3275],['04/06',18,3320],['04/07',19,3277],['04/08',23,3271],['04/09',24,3283],['04/10',24,3266]
+            ['Date', 'Burkina Faso Deaths','China Deaths'],['03/10',0,3088],['03/11',0,3161],['03/16',0,3176],['03/18',1,3173],['03/19',1,3185],['03/20',1,3197],['03/21',2,3185],['03/22',4,3221],['03/23',4,3252],['03/24',4,3234],['03/25',4,3210],['03/26',7,3267],['03/27',9,3229],['03/28',11,3235],['03/29',12,3283],['03/30',12,3245],['03/31',14,3228],['04/01',16,3252],['04/02',16,3276],['04/03',16,3272],['04/04',16,3276],['04/05',17,3275],['04/06',18,3320],['04/07',19,3277],['04/08',23,3271],['04/09',24,3297],['04/10',24,3267],['04/11',27,3298],['04/12',27,3290]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Burkina Faso Recovery','China Recovery'],['03/10',0,56620],['03/11',0,61644],['03/16',0,61773],['03/18',0,61071],['03/19',0,63217],['03/20',0,65120],['03/21',5,64731],['03/22',5,68769],['03/23',5,70686],['03/24',7,66802],['03/25',10,67484],['03/26',10,69651],['03/27',12,69730],['03/28',21,67624],['03/29',23,73195],['03/30',31,71873],['03/31',32,69018],['04/01',46,68260],['04/02',50,73101],['04/03',50,71511],['04/04',66,70564],['04/05',90,71956],['04/06',108,73218],['04/07',127,70684],['04/08',134,70182],['04/09',146,71179],['04/10',146,70246]
+            ['Date', 'Burkina Faso Recovery','China Recovery'],['03/10',0,56620],['03/11',0,61644],['03/16',0,61773],['03/18',0,61071],['03/19',0,63217],['03/20',0,65120],['03/21',5,64731],['03/22',5,68769],['03/23',5,70686],['03/24',7,66790],['03/25',10,67484],['03/26',10,69651],['03/27',12,69730],['03/28',21,67624],['03/29',23,73195],['03/30',31,71873],['03/31',32,69018],['04/01',46,68260],['04/02',50,73101],['04/03',50,71511],['04/04',66,70564],['04/05',90,71956],['04/06',108,73218],['04/07',127,70684],['04/08',134,70182],['04/09',146,72611],['04/10',146,71182],['04/11',155,73799],['04/12',161,71418]
         ]);
 
         var options = {
@@ -113,16 +113,16 @@ code {
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 16974%;" aria-valuenow="16974" aria-valuemin="0" aria-valuemax="100"><b>China - 75193</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Burkina Faso - 443</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 15382%;" aria-valuenow="15382" aria-valuemin="0" aria-valuemax="100"><b>China - 76448</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Burkina Faso - 497</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 13608%;" aria-valuenow="13608" aria-valuemin="0" aria-valuemax="100"><b>China - 3266</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Burkina Faso - 24</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 12185%;" aria-valuenow="12185" aria-valuemin="0" aria-valuemax="100"><b>China - 3290</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Burkina Faso - 27</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 48114%;" aria-valuenow="48114" aria-valuemin="0" aria-valuemax="100"><b>China - 70246  </b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Burkina Faso - 146</b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 44359%;" aria-valuenow="44359" aria-valuemin="0" aria-valuemax="100"><b>China - 71418  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Burkina Faso - 161</b></div>
               </div>
              </div>
           </div>

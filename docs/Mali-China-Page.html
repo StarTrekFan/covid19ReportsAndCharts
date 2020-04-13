@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Mali Infections','China Infections'],['03/25',2,75285],['03/26',4,77242],['03/27',11,76824],['03/28',18,74407],['03/29',18,79694],['03/30',25,78087],['03/31',28,74969],['04/01',31,74190],['04/02',36,78803],['04/03',39,77177],['04/04',41,76022],['04/05',45,77250],['04/06',47,78451],['04/07',56,75853],['04/08',59,75292],['04/09',74,76189],['04/10',87,75193]
+          ['Date', 'Mali Infections','China Infections'],['03/25',2,75285],['03/26',4,77242],['03/27',11,76824],['03/28',18,74407],['03/29',18,79694],['03/30',25,78087],['03/31',28,74969],['04/01',31,74190],['04/02',36,78803],['04/03',39,77177],['04/04',41,76022],['04/05',45,77250],['04/06',47,78451],['04/07',56,75853],['04/08',59,75292],['04/09',74,77646],['04/10',87,76130],['04/11',87,78919],['04/12',105,76448]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Mali Deaths','China Deaths'],['03/25',0,3210],['03/26',0,3267],['03/27',0,3229],['03/28',0,3235],['03/29',1,3283],['03/30',2,3245],['03/31',2,3228],['04/01',3,3252],['04/02',3,3276],['04/03',3,3272],['04/04',3,3276],['04/05',5,3275],['04/06',5,3320],['04/07',5,3277],['04/08',7,3271],['04/09',7,3283],['04/10',7,3266]
+            ['Date', 'Mali Deaths','China Deaths'],['03/25',0,3210],['03/26',0,3267],['03/27',0,3229],['03/28',0,3235],['03/29',1,3283],['03/30',2,3245],['03/31',2,3228],['04/01',3,3252],['04/02',3,3276],['04/03',3,3272],['04/04',3,3276],['04/05',5,3275],['04/06',5,3320],['04/07',5,3277],['04/08',7,3271],['04/09',7,3297],['04/10',7,3267],['04/11',7,3298],['04/12',9,3290]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Mali Recovery','China Recovery'],['03/25',0,67484],['03/26',0,69651],['03/27',0,69730],['03/28',0,67624],['03/29',0,73195],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',1,70564],['04/05',1,71956],['04/06',9,73218],['04/07',12,70684],['04/08',16,70182],['04/09',22,71179],['04/10',22,70246]
+            ['Date', 'Mali Recovery','China Recovery'],['03/25',0,67484],['03/26',0,69651],['03/27',0,69730],['03/28',0,67624],['03/29',0,73195],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',1,70564],['04/05',1,71956],['04/06',9,73218],['04/07',12,70684],['04/08',16,70182],['04/09',22,72611],['04/10',22,71182],['04/11',22,73799],['04/12',22,71418]
         ]);
 
         var options = {
@@ -113,15 +113,15 @@ code {
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 86429%;" aria-valuenow="86429" aria-valuemin="0" aria-valuemax="100"><b>China - 75193</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Mali - 87</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 72808%;" aria-valuenow="72808" aria-valuemin="0" aria-valuemax="100"><b>China - 76448</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Mali - 105</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 46657%;" aria-valuenow="46657" aria-valuemin="0" aria-valuemax="100"><b>China - 3266</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Mali - 7</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 36556%;" aria-valuenow="36556" aria-valuemin="0" aria-valuemax="100"><b>China - 3290</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Mali - 9</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 319300%;" aria-valuenow="319300" aria-valuemin="0" aria-valuemax="100"><b>China - 70246  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 324627%;" aria-valuenow="324627" aria-valuemin="0" aria-valuemax="100"><b>China - 71418  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Mali - 22</b></div>
               </div>
              </div>

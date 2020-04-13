@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Ukraine Infections','Spain Infections'],['03/03',1,165],['03/11',3,7509],['03/16',7,9942],['03/17',14,11748],['03/19',16,17963],['03/20',29,20410],['03/21',47,25374],['03/22',73,28603],['03/23',73,35136],['03/24',97,39885],['03/25',145,49515],['03/26',196,57786],['03/27',310,65719],['03/28',356,73235],['03/29',475,80110],['03/30',548,87956],['03/31',645,95923],['04/01',794,104118],['04/02',897,112065],['04/03',1072,119199],['04/04',1225,126168],['04/05',1308,131646],['04/06',1319,136675],['04/07',1462,141942],['04/08',1668,148220],['04/09',1892,153222],['04/10',2203,158273]
+          ['Date', 'Ukraine Infections','Spain Infections'],['03/03',1,165],['03/11',3,7509],['03/16',7,9942],['03/17',14,11748],['03/19',16,17963],['03/20',29,20410],['03/21',47,25374],['03/22',73,28603],['03/23',73,35136],['03/24',97,39885],['03/25',145,49515],['03/26',196,57786],['03/27',310,65719],['03/28',356,73235],['03/29',475,80110],['03/30',548,87956],['03/31',645,95923],['04/01',794,104118],['04/02',897,112065],['04/03',1072,119199],['04/04',1225,126168],['04/05',1308,131646],['04/06',1319,136675],['04/07',1462,141942],['04/08',1668,148220],['04/09',1892,153222],['04/10',2203,158273],['04/11',2511,163027],['04/12',2777,166831]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Ukraine Deaths','Spain Deaths'],['03/03',0,1],['03/11',1,187],['03/16',1,342],['03/17',2,533],['03/19',2,830],['03/20',3,1043],['03/21',3,1375],['03/22',3,1756],['03/23',3,2311],['03/24',3,2808],['03/25',5,3647],['03/26',5,4365],['03/27',5,5138],['03/28',9,5982],['03/29',10,6803],['03/30',13,7716],['03/31',17,8464],['04/01',20,9387],['04/02',22,10348],['04/03',27,11198],['04/04',32,11947],['04/05',37,12641],['04/06',38,13341],['04/07',45,14045],['04/08',52,14792],['04/09',57,15447],['04/10',69,16081]
+            ['Date', 'Ukraine Deaths','Spain Deaths'],['03/03',0,1],['03/11',1,187],['03/16',1,342],['03/17',2,533],['03/19',2,830],['03/20',3,1043],['03/21',3,1375],['03/22',3,1756],['03/23',3,2311],['03/24',3,2808],['03/25',5,3647],['03/26',5,4365],['03/27',5,5138],['03/28',9,5982],['03/29',10,6803],['03/30',13,7716],['03/31',17,8464],['04/01',20,9387],['04/02',22,10348],['04/03',27,11198],['04/04',32,11947],['04/05',37,12641],['04/06',38,13341],['04/07',45,14045],['04/08',52,14792],['04/09',57,15447],['04/10',69,16081],['04/11',73,16606],['04/12',83,17209]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Ukraine Recovery','Spain Recovery'],['03/03',0,2],['03/11',0,376],['03/16',0,530],['03/17',0,1028],['03/19',0,1107],['03/20',0,1588],['03/21',1,2125],['03/22',1,2125],['03/23',1,3355],['03/24',1,3794],['03/25',1,5367],['03/26',1,7015],['03/27',5,9357],['03/28',5,12285],['03/29',6,14709],['03/30',8,16780],['03/31',10,19259],['04/01',13,22647],['04/02',19,26743],['04/03',22,30513],['04/04',25,34219],['04/05',28,38080],['04/06',28,40437],['04/07',28,43208],['04/08',35,48021],['04/09',45,52165],['04/10',61,55668]
+            ['Date', 'Ukraine Recovery','Spain Recovery'],['03/03',0,2],['03/11',0,376],['03/16',0,530],['03/17',0,1028],['03/19',0,1107],['03/20',0,1588],['03/21',1,2125],['03/22',1,2125],['03/23',1,3355],['03/24',1,3794],['03/25',1,5367],['03/26',1,7015],['03/27',5,9357],['03/28',5,12285],['03/29',6,14709],['03/30',8,16780],['03/31',10,19259],['04/01',13,22647],['04/02',19,26743],['04/03',22,30513],['04/04',25,34219],['04/05',28,38080],['04/06',28,40437],['04/07',28,43208],['04/08',35,48021],['04/09',45,52165],['04/10',61,55668],['04/11',79,59109],['04/12',89,62391]
         ]);
 
         var options = {
@@ -113,16 +113,16 @@ code {
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 7184%;" aria-valuenow="7184" aria-valuemin="0" aria-valuemax="100"><b>Spain - 158273</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Ukraine - 2203</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 6008%;" aria-valuenow="6008" aria-valuemin="0" aria-valuemax="100"><b>Spain - 166831</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Ukraine - 2777</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 23306%;" aria-valuenow="23306" aria-valuemin="0" aria-valuemax="100"><b>Spain - 16081</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Ukraine - 69</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 20734%;" aria-valuenow="20734" aria-valuemin="0" aria-valuemax="100"><b>Spain - 17209</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Ukraine - 83</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 91259%;" aria-valuenow="91259" aria-valuemin="0" aria-valuemax="100"><b>Spain - 55668  </b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Ukraine - 61</b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 70102%;" aria-valuenow="70102" aria-valuemin="0" aria-valuemax="100"><b>Spain - 62391  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Ukraine - 89</b></div>
               </div>
              </div>
           </div>
