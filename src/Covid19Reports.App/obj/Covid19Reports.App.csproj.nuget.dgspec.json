@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\covid19reportsandcharts\\src\\Covid19reports.app\\Covid19Reports.App.csproj": {}
+    "C:\\Projects\\covid19reportsandcharts\\src\\Covid19Reports.App\\Covid19Reports.App.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\covid19reportsandcharts\\src\\Covid19reports.app\\Covid19Reports.App.csproj": {
+    "C:\\Projects\\covid19reportsandcharts\\src\\Covid19Reports.App\\Covid19Reports.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\covid19reportsandcharts\\src\\Covid19reports.app\\Covid19Reports.App.csproj",
+        "projectUniqueName": "C:\\Projects\\covid19reportsandcharts\\src\\Covid19Reports.App\\Covid19Reports.App.csproj",
         "projectName": "Covid19Reports.App",
-        "projectPath": "C:\\Projects\\covid19reportsandcharts\\src\\Covid19reports.app\\Covid19Reports.App.csproj",
+        "projectPath": "C:\\Projects\\covid19reportsandcharts\\src\\Covid19Reports.App\\Covid19Reports.App.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\covid19reportsandcharts\\src\\Covid19reports.app\\obj\\",
+        "outputPath": "C:\\Projects\\covid19reportsandcharts\\src\\Covid19Reports.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -15,7 +15,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Infections','Deaths','Recovery'],['01/22',2,0,0],['01/23',3,0,0],['01/24',5,0,0],['01/25',7,0,0],['01/26',8,0,2],['01/27',8,0,2],['01/28',14,0,5],['01/29',14,0,5],['01/30',14,0,5],['01/31',38,0,10],['02/04',25,0,5],['02/08',32,0,10],['02/11',33,0,10],['02/13',33,0,12],['02/16',34,0,14],['02/17',35,0,15],['02/21',35,0,17],['02/23',35,0,21],['02/25',37,0,22],['02/26',40,0,22],['02/28',41,0,28],['02/29',42,0,28],['03/01',42,1,28],['03/02',43,1,31],['03/05',47,1,31],['03/06',48,1,31],['03/07',50,1,31],['03/10',53,1,33],['03/11',134,2,69],['03/12',70,1,34],['03/14',82,1,35],['03/15',114,1,35],['03/16',147,1,35],['03/17',177,1,41],['03/18',212,1,42],['03/19',272,1,42],['03/20',322,1,42],['03/21',411,1,42],['03/22',599,1,44],['03/23',721,1,52],['03/24',827,4,52],['03/25',934,4,70],['03/26',1045,4,88],['03/27',1136,5,97],['03/28',1245,6,97],['03/29',1388,7,97],['03/30',1524,9,229],['03/31',1651,10,342],['04/01',1771,12,505],['04/02',1875,15,505],['04/03',1978,19,612],['04/04',2067,20,674],['04/05',2169,23,793],['04/06',2220,26,793],['04/07',2258,27,888],['04/08',2369,30,888],['04/09',2423,32,940],['04/10',2473,33,1013],['04/11',2518,35,1135],['04/12',2551,38,1218]
+          ['Date', 'Infections','Deaths','Recovery'],['01/22',2,0,0],['01/23',3,0,0],['01/24',5,0,0],['01/25',7,0,0],['01/26',8,0,2],['01/27',8,0,2],['01/28',14,0,5],['01/29',14,0,5],['01/30',14,0,5],['01/31',38,0,10],['02/04',25,0,5],['02/08',32,0,10],['02/11',33,0,10],['02/13',33,0,12],['02/16',34,0,14],['02/17',35,0,15],['02/21',35,0,17],['02/23',35,0,21],['02/25',37,0,22],['02/26',40,0,22],['02/28',41,0,28],['02/29',42,0,28],['03/01',42,1,28],['03/02',43,1,31],['03/05',47,1,31],['03/06',48,1,31],['03/07',50,1,31],['03/10',53,1,33],['03/11',134,2,69],['03/12',70,1,34],['03/14',82,1,35],['03/15',114,1,35],['03/16',147,1,35],['03/17',177,1,41],['03/18',212,1,42],['03/19',272,1,42],['03/20',322,1,42],['03/21',411,1,42],['03/22',599,1,44],['03/23',721,1,52],['03/24',827,4,52],['03/25',934,4,70],['03/26',1045,4,88],['03/27',1136,5,97],['03/28',1245,6,97],['03/29',1388,7,97],['03/30',1524,9,229],['03/31',1651,10,342],['04/01',1771,12,505],['04/02',1875,15,505],['04/03',1978,19,612],['04/04',2067,20,674],['04/05',2169,23,793],['04/06',2220,26,793],['04/07',2258,27,888],['04/08',2369,30,888],['04/09',2423,32,940],['04/10',2473,33,1013],['04/11',2518,35,1135],['04/12',2551,38,1218],['04/13',2579,40,1288]
         ]);
 
         var options = {
@@ -65,15 +65,15 @@
         <div class="row">
           <div class="col-md-6 offset-md-3">
             <div class="progress" style="height:25px; margin: 0px 0px 5px;">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections: 2551</b></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections: 2579</b></div>
             </div>
             <div class="progress" style="height:25px; margin: 0px 0px 5px;">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 1%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
-              <div class="progress-bar bg-info" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"><b>Deaths: 38</b></div>
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 2%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"><b>Deaths: 40</b></div>
             </div>
             <div class="progress" style="height:25px; margin: 0px 0px 5px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 48%;" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-              <div class="progress-bar bg-info" role="progressbar" style="width: 52%;" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"><b>Recovery: 1218</b></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><b>Recovery: 1288</b></div>
             </div>
            </div>
 
