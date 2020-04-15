@@ -6,6 +6,8 @@ using Covid19Reports.Lib;
 using Covid19Reports.Lib.Publisher;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Covid19Reports.App
 {
@@ -20,23 +22,30 @@ namespace Covid19Reports.App
             //static web pages
             var virusTrackerItems = GetVirusTrackerItems();
 
+            var landingPageTask = Task.Run(() => PublishLandingPage(virusTrackerItems));
+
+            var countryReportsTask = Task.Run(() => PublishCountryReports(virusTrackerItems));
+
+            var comparisonReportTasks = Task.Run(() => PublishComparisionReports(virusTrackerItems));
+
+            landingPageTask.Wait();
+            
+            countryReportsTask.Wait();
+
+            comparisonReportTasks.Wait();
+
+           
+           /*
             //The first page on the site with a list of all countries and their data
             PublishLandingPage(virusTrackerItems);
         
-            //Following reports are to be generated for all Countries
-            var countries = virusTrackerItems.Select(item => item.Country).Distinct().ToList();
-            CountryReportPublishers.ForEach(publisher => {
-
-                countries.ForEach(country => {
-                     PublishReport(publisher,country,virusTrackerItems.Where(item => item.Country == country).ToList());
-                  });
-               
-            });
-
+            //Publish Various Country Specific Reports
+            PublishCountryReports(virusTrackerItems);
+         
             //Publish Comparision Reports. This report could be run in the previous step
             //but it will be very slow
             PublishComparisionReports(virusTrackerItems);
-         
+         */
         }
 
         private static void PublishComparisionReports(List<VirusTrackerItem> virusTrackerItems)
@@ -77,6 +86,20 @@ namespace Covid19Reports.App
             landingPagePublisher.VirusTrackerItems = virusTrackerItems;
 
             landingPagePublisher.PublishWebReports();
+        }
+      
+        private static void PublishCountryReports(List<VirusTrackerItem> virusTrackerItems)
+        {
+            //Following reports are to be generated for all Countries
+            var countries = virusTrackerItems.Select(item => item.Country).Distinct().ToList();
+            CountryReportPublishers.ForEach(publisher => {
+
+                countries.ForEach(country => {
+                     PublishReport(publisher,country,virusTrackerItems.Where(item => item.Country == country).ToList());
+                  });
+               
+            });
+
         }
         private static void PublishReport(Covid19ReportPublisher publisher,string country, List<VirusTrackerItem> virusTrackerItems)
         {
