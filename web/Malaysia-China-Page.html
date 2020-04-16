@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Malaysia Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Malaysia Infections','China Infections'],['01/23',0,639],['01/25',3,1399],['01/26',4,2062],['01/27',4,2863],['01/28',4,5494],['01/29',7,6070],['01/30',8,8124],['01/31',24,9812],['02/04',10,23679],['02/05',12,27374],['02/07',12,34056],['02/08',16,36759],['02/10',18,42168],['02/11',18,44268],['02/13',19,59831],['02/15',22,68346],['02/18',22,74138],['02/19',22,74545],['02/24',22,76987],['02/29',25,78995],['03/01',29,79588],['03/03',36,79574],['03/04',50,79538],['03/06',83,79771],['03/07',93,78619],['03/08',99,81587],['03/09',117,76902],['03/10',129,77201],['03/11',346,80921],['03/14',238,79909],['03/15',428,73594],['03/16',566,74798],['03/17',673,73937],['03/18',790,72280],['03/19',900,73759],['03/20',1030,75039],['03/21',1183,74098],['03/22',1306,77772],['03/23',1518,79314],['03/24',1624,75037],['03/25',1796,75285],['03/26',2031,77242],['03/27',2161,76824],['03/28',2320,74407],['03/29',2470,79694],['03/30',2626,78087],['03/31',2766,74969],['04/01',2908,74190],['04/02',3116,78803],['04/03',3333,77177],['04/04',3483,76022],['04/05',3662,77250],['04/06',3793,78451],['04/07',3963,75853],['04/08',4119,75292],['04/09',4228,77646],['04/10',4346,76130],['04/11',4530,78919],['04/12',4683,78567],['04/13',4817,76114],['04/14',4987,77718]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Malaysia & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Malaysia Deaths','China Deaths'],['01/23',0,18],['01/25',0,42],['01/26',0,56],['01/27',0,82],['01/28',0,131],['01/29',0,133],['01/30',0,171],['01/31',0,213],['02/04',0,490],['02/05',0,562],['02/07',0,717],['02/08',0,804],['02/10',0,1011],['02/11',0,1111],['02/13',0,1368],['02/15',0,1662],['02/18',0,2002],['02/19',0,2114],['02/24',0,2591],['02/29',0,2831],['03/01',0,2868],['03/03',0,2941],['03/04',0,2973],['03/06',0,3029],['03/07',0,3051],['03/08',0,3102],['03/09',0,3071],['03/10',0,3088],['03/11',0,3161],['03/14',0,3191],['03/15',0,3134],['03/16',0,3176],['03/17',2,3166],['03/18',2,3173],['03/19',2,3185],['03/20',3,3197],['03/21',4,3185],['03/22',10,3221],['03/23',14,3252],['03/24',16,3234],['03/25',20,3210],['03/26',23,3267],['03/27',26,3229],['03/28',27,3235],['03/29',35,3283],['03/30',37,3245],['03/31',43,3228],['04/01',45,3252],['04/02',50,3276],['04/03',53,3272],['04/04',57,3276],['04/05',61,3275],['04/06',62,3320],['04/07',63,3277],['04/08',65,3271],['04/09',67,3297],['04/10',70,3267],['04/11',73,3298],['04/12',76,3314],['04/13',77,3279],['04/14',82,3307]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Malaysia & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Malaysia Recovery','China Recovery'],['01/23',0,30],['01/25',0,39],['01/26',0,49],['01/27',0,58],['01/28',0,101],['01/29',0,120],['01/30',0,135],['01/31',0,216],['02/04',0,843],['02/05',0,1114],['02/07',1,1995],['02/08',1,2592],['02/10',1,3889],['02/11',3,4630],['02/13',3,6212],['02/15',7,9293],['02/18',13,14198],['02/19',15,15951],['02/24',18,24869],['02/29',18,39066],['03/01',18,41918],['03/03',22,46903],['03/04',22,49299],['03/06',22,53172],['03/07',23,53511],['03/08',24,58228],['03/09',24,55004],['03/10',24,56620],['03/11',52,61644],['03/14',35,64621],['03/15',42,59745],['03/16',42,61773],['03/17',49,61788],['03/18',60,61071],['03/19',75,63217],['03/20',87,65120],['03/21',114,64731],['03/22',139,68769],['03/23',159,70686],['03/24',183,66790],['03/25',199,67484],['03/26',215,69651],['03/27',259,69730],['03/28',320,67624],['03/29',388,73195],['03/30',479,71873],['03/31',537,69018],['04/01',645,68260],['04/02',767,73101],['04/03',827,71511],['04/04',915,70564],['04/05',1005,71956],['04/06',1241,73218],['04/07',1321,70684],['04/08',1487,70182],['04/09',1608,72611],['04/10',1830,71182],['04/11',1995,73799],['04/12',2108,73458],['04/13',2276,70991],['04/14',2478,72840]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Malaysia & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Malaysia - China REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 1558%;" aria-valuenow="1558" aria-valuemin="0" aria-valuemax="100"><b>China - 77718</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Malaysia - 4987</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 4033%;" aria-valuenow="4033" aria-valuemin="0" aria-valuemax="100"><b>China - 3307</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Malaysia - 82</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 2939%;" aria-valuenow="2939" aria-valuemin="0" aria-valuemax="100"><b>China - 72840  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Malaysia - 2478</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Malaysia-Page.html" role="button">Back to Malaysia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Malaysia-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Malaysia-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Malaysia-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

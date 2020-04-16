@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Italy Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Italy Infections','Italy Infections'],['01/31',12,12],['02/07',6,6],['02/21',40,40],['02/22',124,124],['02/23',310,310],['02/24',458,458],['02/25',644,644],['02/26',906,906],['02/28',1776,1776],['02/29',2256,2256],['03/01',3388,3388],['03/02',4072,4072],['03/03',5004,5004],['03/04',6178,6178],['03/05',7716,7716],['03/06',9272,9272],['03/07',11766,11766],['03/08',14750,14750],['03/09',18344,18344],['03/10',20298,20298],['03/11',60244,60244],['03/14',49494,49494],['03/16',55960,55960],['03/17',63012,63012],['03/18',71426,71426],['03/19',82070,82070],['03/20',94042,94042],['03/21',107156,107156],['03/22',118276,118276],['03/23',127854,127854],['03/24',138352,138352],['03/25',148772,148772],['03/26',161178,161178],['03/27',172996,172996],['03/28',184944,184944],['03/29',195378,195378],['03/30',203478,203478],['03/31',211584,211584],['04/01',221148,221148],['04/02',230484,230484],['04/03',239654,239654],['04/04',249264,249264],['04/05',257896,257896],['04/06',265094,265094],['04/07',271172,271172],['04/08',278844,278844],['04/09',287252,287252],['04/10',295154,295154],['04/11',304542,304542],['04/12',312726,312726],['04/13',319032,319032],['04/14',324976,324976]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Italy & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Italy Deaths','Italy Deaths'],['01/31',0,0],['02/07',0,0],['02/21',2,2],['02/22',4,4],['02/23',6,6],['02/24',14,14],['02/25',20,20],['02/26',24,24],['02/28',42,42],['02/29',58,58],['03/01',68,68],['03/02',104,104],['03/03',158,158],['03/04',214,214],['03/05',296,296],['03/06',394,394],['03/07',466,466],['03/08',732,732],['03/09',926,926],['03/10',1262,1262],['03/11',4186,4186],['03/14',3618,3618],['03/16',4316,4316],['03/17',5006,5006],['03/18',5956,5956],['03/19',6810,6810],['03/20',8064,8064],['03/21',9650,9650],['03/22',10952,10952],['03/23',12154,12154],['03/24',13640,13640],['03/25',15006,15006],['03/26',16430,16430],['03/27',18268,18268],['03/28',20046,20046],['03/29',21558,21558],['03/30',23182,23182],['03/31',24856,24856],['04/01',26310,26310],['04/02',27830,27830],['04/03',29362,29362],['04/04',30724,30724],['04/05',31774,31774],['04/06',33046,33046],['04/07',34254,34254],['04/08',35338,35338],['04/09',36558,36558],['04/10',37698,37698],['04/11',38936,38936],['04/12',39798,39798],['04/13',40930,40930],['04/14',42134,42134]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Italy & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Italy Recovery','Italy Recovery'],['01/31',0,0],['02/07',0,0],['02/21',0,0],['02/22',2,2],['02/23',4,4],['02/24',2,2],['02/25',2,2],['02/26',6,6],['02/28',92,92],['02/29',92,92],['03/01',166,166],['03/02',298,298],['03/03',320,320],['03/04',552,552],['03/05',828,828],['03/06',1046,1046],['03/07',1178,1178],['03/08',1244,1244],['03/09',1448,1448],['03/10',1448,1448],['03/11',4968,4968],['03/14',4670,4670],['03/16',5498,5498],['03/17',5882,5882],['03/18',8050,8050],['03/19',8880,8880],['03/20',8880,8880],['03/21',12144,12144],['03/22',14048,14048],['03/23',14864,14864],['03/24',16652,16652],['03/25',18724,18724],['03/26',20722,20722],['03/27',21900,21900],['03/28',24768,24768],['03/29',26060,26060],['03/30',29240,29240],['03/31',31458,31458],['04/01',33694,33694],['04/02',36556,36556],['04/03',39516,39516],['04/04',41992,41992],['04/05',43630,43630],['04/06',45674,45674],['04/07',48784,48784],['04/08',52982,52982],['04/09',56940,56940],['04/10',60910,60910],['04/11',65068,65068],['04/12',68422,68422],['04/13',70870,70870],['04/14',74260,74260]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Italy & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Italy - Italy REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Italy - 324976</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Italy - 324976</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Italy - 42134</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Italy - 42134</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Italy - 74260  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Italy - 74260</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Italy-Page.html" role="button">Back to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Italy-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Italy-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Italy-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

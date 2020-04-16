@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Hungary Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Hungary Infections','Spain Infections'],['03/04',2,222],['03/05',2,259],['03/07',4,500],['03/08',7,673],['03/09',9,1073],['03/11',32,7509],['03/14',30,6391],['03/15',32,7798],['03/16',39,9942],['03/17',50,11748],['03/18',58,13910],['03/19',73,17963],['03/20',85,20410],['03/21',103,25374],['03/22',131,28603],['03/23',167,35136],['03/24',187,39885],['03/25',226,49515],['03/26',261,57786],['03/27',300,65719],['03/28',343,73235],['03/29',408,80110],['03/30',447,87956],['03/31',492,95923],['04/01',525,104118],['04/02',585,112065],['04/03',623,119199],['04/04',678,126168],['04/05',733,131646],['04/06',744,136675],['04/07',817,141942],['04/08',895,148220],['04/09',980,153222],['04/10',1190,158273],['04/11',1310,163027],['04/12',1410,166831],['04/13',1458,170099],['04/14',1512,172541]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Hungary & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Hungary Deaths','Spain Deaths'],['03/04',0,2],['03/05',0,3],['03/07',0,10],['03/08',0,17],['03/09',0,28],['03/11',0,187],['03/14',0,195],['03/15',1,289],['03/16',1,342],['03/17',1,533],['03/18',1,623],['03/19',1,830],['03/20',3,1043],['03/21',4,1375],['03/22',6,1756],['03/23',7,2311],['03/24',9,2808],['03/25',10,3647],['03/26',10,4365],['03/27',10,5138],['03/28',11,5982],['03/29',13,6803],['03/30',15,7716],['03/31',16,8464],['04/01',20,9387],['04/02',21,10348],['04/03',26,11198],['04/04',32,11947],['04/05',34,12641],['04/06',38,13341],['04/07',47,14045],['04/08',58,14792],['04/09',66,15447],['04/10',77,16081],['04/11',85,16606],['04/12',99,17209],['04/13',109,17756],['04/14',122,18056]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Hungary & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Hungary Recovery','Spain Recovery'],['03/04',0,2],['03/05',0,2],['03/07',0,30],['03/08',0,30],['03/09',0,32],['03/11',0,376],['03/14',1,517],['03/15',1,517],['03/16',1,530],['03/17',2,1028],['03/18',2,1081],['03/19',2,1107],['03/20',2,1588],['03/21',7,2125],['03/22',16,2125],['03/23',16,3355],['03/24',21,3794],['03/25',21,5367],['03/26',28,7015],['03/27',34,9357],['03/28',34,12285],['03/29',34,14709],['03/30',34,16780],['03/31',37,19259],['04/01',40,22647],['04/02',42,26743],['04/03',43,30513],['04/04',58,34219],['04/05',66,38080],['04/06',67,40437],['04/07',71,43208],['04/08',94,48021],['04/09',96,52165],['04/10',112,55668],['04/11',115,59109],['04/12',118,62391],['04/13',120,64727],['04/14',122,67504]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Hungary & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Hungary - Spain REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 11411%;" aria-valuenow="11411" aria-valuemin="0" aria-valuemax="100"><b>Spain - 172541</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Hungary - 1512</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 14800%;" aria-valuenow="14800" aria-valuemin="0" aria-valuemax="100"><b>Spain - 18056</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Hungary - 122</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 55331%;" aria-valuenow="55331" aria-valuemin="0" aria-valuemax="100"><b>Spain - 67504  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Hungary - 122</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Hungary-Page.html" role="button">Back to Hungary</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Hungary-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Hungary-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Hungary-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

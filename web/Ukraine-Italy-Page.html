@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Ukraine Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Ukraine Infections','Italy Infections'],['03/03',1,2502],['03/11',3,30122],['03/16',7,27980],['03/17',14,31506],['03/19',16,41035],['03/20',29,47021],['03/21',47,53578],['03/22',73,59138],['03/23',73,63927],['03/24',97,69176],['03/25',145,74386],['03/26',196,80589],['03/27',310,86498],['03/28',356,92472],['03/29',475,97689],['03/30',548,101739],['03/31',645,105792],['04/01',794,110574],['04/02',897,115242],['04/03',1072,119827],['04/04',1225,124632],['04/05',1308,128948],['04/06',1319,132547],['04/07',1462,135586],['04/08',1668,139422],['04/09',1892,143626],['04/10',2203,147577],['04/11',2511,152271],['04/12',2777,156363],['04/13',3102,159516],['04/14',3372,162488]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Ukraine & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Ukraine Deaths','Italy Deaths'],['03/03',0,79],['03/11',1,2093],['03/16',1,2158],['03/17',2,2503],['03/19',2,3405],['03/20',3,4032],['03/21',3,4825],['03/22',3,5476],['03/23',3,6077],['03/24',3,6820],['03/25',5,7503],['03/26',5,8215],['03/27',5,9134],['03/28',9,10023],['03/29',10,10779],['03/30',13,11591],['03/31',17,12428],['04/01',20,13155],['04/02',22,13915],['04/03',27,14681],['04/04',32,15362],['04/05',37,15887],['04/06',38,16523],['04/07',45,17127],['04/08',52,17669],['04/09',57,18279],['04/10',69,18849],['04/11',73,19468],['04/12',83,19899],['04/13',93,20465],['04/14',98,21067]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Ukraine & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Ukraine Recovery','Italy Recovery'],['03/03',0,160],['03/11',0,2484],['03/16',0,2749],['03/17',0,2941],['03/19',0,4440],['03/20',0,4440],['03/21',1,6072],['03/22',1,7024],['03/23',1,7432],['03/24',1,8326],['03/25',1,9362],['03/26',1,10361],['03/27',5,10950],['03/28',5,12384],['03/29',6,13030],['03/30',8,14620],['03/31',10,15729],['04/01',13,16847],['04/02',19,18278],['04/03',22,19758],['04/04',25,20996],['04/05',28,21815],['04/06',28,22837],['04/07',28,24392],['04/08',35,26491],['04/09',45,28470],['04/10',61,30455],['04/11',79,32534],['04/12',89,34211],['04/13',97,35435],['04/14',119,37130]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Ukraine & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Ukraine - Italy REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 4819%;" aria-valuenow="4819" aria-valuemin="0" aria-valuemax="100"><b>Italy - 162488</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Ukraine - 3372</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 21497%;" aria-valuenow="21497" aria-valuemin="0" aria-valuemax="100"><b>Italy - 21067</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Ukraine - 98</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 31202%;" aria-valuenow="31202" aria-valuemin="0" aria-valuemax="100"><b>Italy - 37130  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Ukraine - 119</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Ukraine-Page.html" role="button">Back to Ukraine</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Ukraine-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Ukraine-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Ukraine-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

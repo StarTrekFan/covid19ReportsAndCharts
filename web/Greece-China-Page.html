@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Greece Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Greece Infections','China Infections'],['02/26',1,77900],['02/28',4,78330],['03/01',7,79588],['03/04',9,79538],['03/05',31,79465],['03/06',45,79771],['03/07',46,78619],['03/08',73,81587],['03/10',89,77201],['03/11',289,80921],['03/14',228,79909],['03/15',331,73594],['03/16',331,74798],['03/17',387,73937],['03/18',418,72280],['03/19',418,73759],['03/20',495,75039],['03/21',530,74098],['03/22',624,77772],['03/23',695,79314],['03/24',743,75037],['03/25',821,75285],['03/26',892,77242],['03/27',966,76824],['03/28',1061,74407],['03/29',1156,79694],['03/30',1212,78087],['03/31',1314,74969],['04/01',1415,74190],['04/02',1544,78803],['04/03',1613,77177],['04/04',1673,76022],['04/05',1735,77250],['04/06',1755,78451],['04/07',1832,75853],['04/08',1884,75292],['04/09',1955,77646],['04/10',2011,76130],['04/11',2081,78919],['04/12',2114,78567],['04/13',2145,76114],['04/14',2170,77718]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Greece & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Greece Deaths','China Deaths'],['02/26',0,2713],['02/28',0,2782],['03/01',0,2868],['03/04',0,2973],['03/05',0,3000],['03/06',0,3029],['03/07',0,3051],['03/08',0,3102],['03/10',0,3088],['03/11',2,3161],['03/14',3,3191],['03/15',4,3134],['03/16',4,3176],['03/17',5,3166],['03/18',5,3173],['03/19',6,3185],['03/20',6,3197],['03/21',13,3185],['03/22',15,3221],['03/23',17,3252],['03/24',20,3234],['03/25',22,3210],['03/26',26,3267],['03/27',28,3229],['03/28',32,3235],['03/29',38,3283],['03/30',43,3245],['03/31',49,3228],['04/01',50,3252],['04/02',53,3276],['04/03',63,3272],['04/04',68,3276],['04/05',73,3275],['04/06',79,3320],['04/07',81,3277],['04/08',83,3271],['04/09',87,3297],['04/10',92,3267],['04/11',93,3298],['04/12',98,3314],['04/13',99,3279],['04/14',101,3307]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Greece & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Greece Recovery','China Recovery'],['02/26',0,29930],['02/28',0,35897],['03/01',0,41918],['03/04',0,49299],['03/05',0,51466],['03/06',0,53172],['03/07',0,53511],['03/08',0,58228],['03/10',0,56620],['03/11',0,61644],['03/14',8,64621],['03/15',8,59745],['03/16',8,61773],['03/17',8,61788],['03/18',8,61071],['03/19',8,63217],['03/20',19,65120],['03/21',19,64731],['03/22',19,68769],['03/23',29,70686],['03/24',29,66790],['03/25',36,67484],['03/26',36,69651],['03/27',52,69730],['03/28',52,67624],['03/29',52,73195],['03/30',52,71873],['03/31',52,69018],['04/01',52,68260],['04/02',61,73101],['04/03',78,71511],['04/04',78,70564],['04/05',78,71956],['04/06',269,73218],['04/07',269,70684],['04/08',269,70182],['04/09',269,72611],['04/10',269,71182],['04/11',269,73799],['04/12',269,73458],['04/13',269,70991],['04/14',269,72840]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Greece & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Greece - China REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 3581%;" aria-valuenow="3581" aria-valuemin="0" aria-valuemax="100"><b>China - 77718</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Greece - 2170</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 3274%;" aria-valuenow="3274" aria-valuemin="0" aria-valuemax="100"><b>China - 3307</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Greece - 101</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 27078%;" aria-valuenow="27078" aria-valuemin="0" aria-valuemax="100"><b>China - 72840  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Greece - 269</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Greece-Page.html" role="button">Back to Greece</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Greece-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Greece-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Greece-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

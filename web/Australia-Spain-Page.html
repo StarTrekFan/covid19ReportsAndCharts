@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Australia Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Australia Infections','Spain Infections'],['01/23',0,0],['01/25',4,0],['01/26',4,0],['01/27',5,0],['01/28',5,0],['01/29',5,0],['01/30',9,0],['01/31',9,0],['02/01',20,2],['02/02',4,0],['02/04',3,0],['02/06',8,0],['02/07',5,0],['02/09',5,2],['02/13',8,0],['02/17',2,0],['02/21',9,0],['02/22',7,0],['02/29',21,45],['03/01',8,84],['03/02',10,120],['03/03',24,165],['03/04',38,222],['03/05',26,259],['03/06',33,400],['03/07',39,500],['03/08',55,673],['03/09',67,1073],['03/10',98,1695],['03/11',327,7509],['03/14',250,6391],['03/15',278,7798],['03/16',376,9942],['03/17',413,11748],['03/18',567,13910],['03/19',559,17963],['03/20',660,20410],['03/21',1068,25374],['03/22',1490,28603],['03/23',1682,35136],['03/24',2044,39885],['03/25',2364,49515],['03/26',2810,57786],['03/27',3143,65719],['03/28',3640,73235],['03/29',3984,80110],['03/30',4361,87956],['03/31',4559,95923],['04/01',4862,104118],['04/02',5116,112065],['04/03',5330,119199],['04/04',5550,126168],['04/05',5687,131646],['04/06',5797,136675],['04/07',5895,141942],['04/08',6010,148220],['04/09',6108,153222],['04/10',6215,158273],['04/11',6303,163027],['04/12',6315,166831],['04/13',6351,170099],['04/14',6415,172541]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Australia & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Australia Deaths','Spain Deaths'],['01/23',0,0],['01/25',0,0],['01/26',0,0],['01/27',0,0],['01/28',0,0],['01/29',0,0],['01/30',0,0],['01/31',0,0],['02/01',0,0],['02/02',0,0],['02/04',0,0],['02/06',0,0],['02/07',0,0],['02/09',0,0],['02/13',0,0],['02/17',0,0],['02/21',0,0],['02/22',0,0],['02/29',0,0],['03/01',1,0],['03/02',0,0],['03/03',0,1],['03/04',1,2],['03/05',1,3],['03/06',1,5],['03/07',1,10],['03/08',3,17],['03/09',4,28],['03/10',3,35],['03/11',6,187],['03/14',3,195],['03/15',2,289],['03/16',3,342],['03/17',5,533],['03/18',6,623],['03/19',6,830],['03/20',7,1043],['03/21',7,1375],['03/22',7,1756],['03/23',7,2311],['03/24',8,2808],['03/25',8,3647],['03/26',13,4365],['03/27',13,5138],['03/28',14,5982],['03/29',16,6803],['03/30',17,7716],['03/31',18,8464],['04/01',20,9387],['04/02',24,10348],['04/03',28,11198],['04/04',30,11947],['04/05',35,12641],['04/06',40,13341],['04/07',45,14045],['04/08',50,14792],['04/09',51,15447],['04/10',54,16081],['04/11',57,16606],['04/12',60,17209],['04/13',61,17756],['04/14',62,18056]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Australia & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Australia Recovery','Spain Recovery'],['01/23',0,0],['01/25',0,0],['01/26',0,0],['01/27',0,0],['01/28',0,0],['01/29',0,0],['01/30',2,0],['01/31',2,0],['02/01',4,0],['02/02',0,0],['02/04',0,0],['02/06',2,0],['02/07',0,0],['02/09',0,0],['02/13',8,0],['02/17',2,0],['02/21',1,0],['02/22',0,0],['02/29',7,2],['03/01',4,2],['03/02',4,2],['03/03',5,2],['03/04',10,2],['03/05',15,2],['03/06',6,2],['03/07',11,30],['03/08',12,30],['03/09',11,32],['03/10',19,32],['03/11',44,376],['03/14',23,517],['03/15',23,517],['03/16',23,530],['03/17',20,1028],['03/18',23,1081],['03/19',18,1107],['03/20',15,1588],['03/21',26,2125],['03/22',92,2125],['03/23',119,3355],['03/24',119,3794],['03/25',119,5367],['03/26',172,7015],['03/27',194,9357],['03/28',244,12285],['03/29',244,14709],['03/30',257,16780],['03/31',358,19259],['04/01',422,22647],['04/02',520,26743],['04/03',649,30513],['04/04',701,34219],['04/05',757,38080],['04/06',1080,40437],['04/07',1080,43208],['04/08',1080,48021],['04/09',1472,52165],['04/10',1793,55668],['04/11',1806,59109],['04/12',1806,62391],['04/13',1806,64727],['04/14',2186,67504]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Australia & Spain',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Australia - Spain REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 2690%;" aria-valuenow="2690" aria-valuemin="0" aria-valuemax="100"><b>Spain - 172541</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Australia - 6415</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 29123%;" aria-valuenow="29123" aria-valuemin="0" aria-valuemax="100"><b>Spain - 18056</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Australia - 62</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 3088%;" aria-valuenow="3088" aria-valuemin="0" aria-valuemax="100"><b>Spain - 67504  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Australia - 2186</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Australia-Page.html" role="button">Back to Australia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Australia-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Australia-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Australia-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

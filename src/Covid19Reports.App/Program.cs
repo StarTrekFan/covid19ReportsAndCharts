@@ -22,20 +22,16 @@ namespace Covid19Reports.App
             //static web pages
             var virusTrackerItems = GetVirusTrackerItems();
 
-            var landingPageTask = Task.Run(() => PublishLandingPage(virusTrackerItems));
+         /*   var landingPageTask = Task.Run(() => PublishLandingPage(virusTrackerItems));
 
             var countryReportsTask = Task.Run(() => PublishCountryReports(virusTrackerItems));
 
             var comparisonReportTasks = Task.Run(() => PublishComparisionReports(virusTrackerItems));
 
-            landingPageTask.Wait();
-            
-            countryReportsTask.Wait();
-
-            comparisonReportTasks.Wait();
-
+            await Task.WhenAll(landingPageTask,countryReportsTask,comparisonReportTasks);
+   
+           */
            
-           /*
             //The first page on the site with a list of all countries and their data
             PublishLandingPage(virusTrackerItems);
         
@@ -45,7 +41,7 @@ namespace Covid19Reports.App
             //Publish Comparision Reports. This report could be run in the previous step
             //but it will be very slow
             PublishComparisionReports(virusTrackerItems);
-         */
+         
         }
 
         private static void PublishComparisionReports(List<VirusTrackerItem> virusTrackerItems)

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Estonia Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Estonia Infections','China Infections'],['03/03',2,79574],['03/05',3,79465],['03/06',10,79771],['03/10',12,77201],['03/11',95,80921],['03/14',115,79909],['03/15',171,73594],['03/16',205,74798],['03/17',225,73937],['03/18',258,72280],['03/19',267,73759],['03/20',283,75039],['03/21',306,74098],['03/22',326,77772],['03/23',352,79314],['03/24',369,75037],['03/25',404,75285],['03/26',538,77242],['03/27',575,76824],['03/28',645,74407],['03/29',679,79694],['03/30',715,78087],['03/31',745,74969],['04/01',779,74190],['04/02',858,78803],['04/03',961,77177],['04/04',1039,76022],['04/05',1097,77250],['04/06',1108,78451],['04/07',1149,75853],['04/08',1185,75292],['04/09',1207,77646],['04/10',1258,76130],['04/11',1304,78919],['04/12',1309,78567],['04/13',1332,76114],['04/14',1373,77718]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Estonia & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Estonia Deaths','China Deaths'],['03/03',0,2941],['03/05',0,3000],['03/06',0,3029],['03/10',0,3088],['03/11',0,3161],['03/14',0,3191],['03/15',0,3134],['03/16',0,3176],['03/17',0,3166],['03/18',0,3173],['03/19',0,3185],['03/20',0,3197],['03/21',0,3185],['03/22',0,3221],['03/23',0,3252],['03/24',0,3234],['03/25',1,3210],['03/26',1,3267],['03/27',1,3229],['03/28',1,3235],['03/29',3,3283],['03/30',3,3245],['03/31',4,3228],['04/01',5,3252],['04/02',11,3276],['04/03',12,3272],['04/04',13,3276],['04/05',15,3275],['04/06',19,3320],['04/07',21,3277],['04/08',24,3271],['04/09',24,3297],['04/10',24,3267],['04/11',24,3298],['04/12',25,3314],['04/13',28,3279],['04/14',31,3307]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Estonia & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Estonia Recovery','China Recovery'],['03/03',0,46903],['03/05',0,51466],['03/06',0,53172],['03/10',0,56620],['03/11',0,61644],['03/14',0,64621],['03/15',1,59745],['03/16',1,61773],['03/17',1,61788],['03/18',1,61071],['03/19',1,63217],['03/20',1,65120],['03/21',1,64731],['03/22',4,68769],['03/23',4,70686],['03/24',7,66790],['03/25',8,67484],['03/26',8,69651],['03/27',11,69730],['03/28',20,67624],['03/29',20,73195],['03/30',20,71873],['03/31',26,69018],['04/01',33,68260],['04/02',45,73101],['04/03',48,71511],['04/04',59,70564],['04/05',62,71956],['04/06',62,73218],['04/07',69,70684],['04/08',72,70182],['04/09',83,72611],['04/10',93,71182],['04/11',93,73799],['04/12',98,73458],['04/13',102,70991],['04/14',115,72840]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Estonia & China',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Estonia - China REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 5660%;" aria-valuenow="5660" aria-valuemin="0" aria-valuemax="100"><b>China - 77718</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Estonia - 1373</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 10668%;" aria-valuenow="10668" aria-valuemin="0" aria-valuemax="100"><b>China - 3307</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Estonia - 31</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 63339%;" aria-valuenow="63339" aria-valuemin="0" aria-valuemax="100"><b>China - 72840  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Estonia - 115</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Estonia-Page.html" role="button">Back to Estonia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Estonia-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Estonia-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Estonia-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

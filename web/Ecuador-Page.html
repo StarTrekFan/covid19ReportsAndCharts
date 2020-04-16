@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Infections','Deaths','Recovery'],['03/01',6,0,0],['03/03',7,0,0],['03/04',10,0,0],['03/05',13,0,0],['03/08',14,0,0],['03/09',15,0,0],['03/11',34,0,0],['03/14',28,2,0],['03/16',37,2,0],['03/17',58,2,0],['03/18',111,2,0],['03/19',199,3,0],['03/20',367,5,0],['03/21',506,7,3],['03/22',789,14,3],['03/23',981,18,3],['03/24',1082,27,3],['03/25',1173,28,3],['03/26',1403,34,3],['03/27',1595,36,3],['03/28',1823,48,3],['03/29',1924,58,3],['03/30',1962,60,3],['03/31',2240,75,54],['04/01',2748,93,58],['04/02',3163,120,65],['04/03',3368,145,65],['04/04',3465,172,100],['04/05',3646,180,100],['04/06',3747,191,100],['04/07',3747,191,100],['04/08',4450,242,140],['04/09',4965,272,339],['04/10',7161,297,368],['04/11',7257,315,411],['04/12',7466,333,501],['04/13',7529,355,597],['04/14',7603,369,696]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Infections, Deaths & Recovery - Ecuador',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+
+      
+
+    </script>
+    <style>
+      main > .container {
+        padding: 80px 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="Index.html"> COVID-19: Ecuador</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+     
+    
+    <main role="main">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <H3><b>COVID-19 Ecuador REPORT</b></H3></H3>
+        </div>
+        <div class="row justify-content-md-center">
+          <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+         </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <div class="progress" style="height:25px; margin: 0px 0px 5px;">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections: 7603</b></div>
+            </div>
+            <div class="progress" style="height:25px; margin: 0px 0px 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><b>Deaths: 369</b></div>
+            </div>
+            <div class="progress" style="height:25px; margin: 0px 0px 5px;">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 9%;" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 91%;" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"><b>Recovery: 696</b></div>
+            </div>
+           </div>
+
+         </div>
+         <div class="row justify-content-md-center">
+         
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" onclick="alert('States or Province Data Not Avaialable')" role="button" disabled title="States or Province Data Not Avaialable">Show States or Provinces</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Ecuador-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Ecuador-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Ecuador-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+        </div>
+      </div>
+     
+    
+    </main>
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

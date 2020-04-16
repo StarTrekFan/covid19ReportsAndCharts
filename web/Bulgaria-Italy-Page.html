@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Bulgaria Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Bulgaria Infections','Italy Infections'],['03/08',4,7375],['03/09',4,9172],['03/11',30,30122],['03/14',41,24747],['03/15',51,0],['03/16',52,27980],['03/17',67,31506],['03/18',92,35713],['03/19',94,41035],['03/20',127,47021],['03/21',163,53578],['03/22',187,59138],['03/23',201,63927],['03/24',218,69176],['03/25',242,74386],['03/26',264,80589],['03/27',293,86498],['03/28',331,92472],['03/29',346,97689],['03/30',359,101739],['03/31',399,105792],['04/01',422,110574],['04/02',457,115242],['04/03',485,119827],['04/04',503,124632],['04/05',531,128948],['04/06',549,132547],['04/07',577,135586],['04/08',593,139422],['04/09',618,143626],['04/10',635,147577],['04/11',661,152271],['04/12',675,156363],['04/13',685,159516],['04/14',713,162488]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Bulgaria & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Bulgaria Deaths','Italy Deaths'],['03/08',0,366],['03/09',0,463],['03/11',2,2093],['03/14',2,1809],['03/15',2,0],['03/16',2,2158],['03/17',2,2503],['03/18',2,2978],['03/19',3,3405],['03/20',3,4032],['03/21',3,4825],['03/22',3,5476],['03/23',3,6077],['03/24',3,6820],['03/25',3,7503],['03/26',3,8215],['03/27',3,9134],['03/28',7,10023],['03/29',8,10779],['03/30',8,11591],['03/31',8,12428],['04/01',10,13155],['04/02',10,13915],['04/03',14,14681],['04/04',17,15362],['04/05',20,15887],['04/06',22,16523],['04/07',23,17127],['04/08',24,17669],['04/09',24,18279],['04/10',25,18849],['04/11',28,19468],['04/12',29,19899],['04/13',32,20465],['04/14',35,21067]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Bulgaria & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Bulgaria Recovery','Italy Recovery'],['03/08',0,622],['03/09',0,724],['03/11',0,2484],['03/14',0,2335],['03/15',0,0],['03/16',0,2749],['03/17',0,2941],['03/18',0,4025],['03/19',0,4440],['03/20',0,4440],['03/21',3,6072],['03/22',3,7024],['03/23',3,7432],['03/24',3,8326],['03/25',4,9362],['03/26',8,10361],['03/27',9,10950],['03/28',11,12384],['03/29',14,13030],['03/30',17,14620],['03/31',17,15729],['04/01',20,16847],['04/02',25,18278],['04/03',30,19758],['04/04',34,20996],['04/05',37,21815],['04/06',39,22837],['04/07',42,24392],['04/08',42,26491],['04/09',48,28470],['04/10',54,30455],['04/11',62,32534],['04/12',68,34211],['04/13',71,35435],['04/14',81,37130]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Bulgaria & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Bulgaria - Italy REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 22789%;" aria-valuenow="22789" aria-valuemin="0" aria-valuemax="100"><b>Italy - 162488</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Bulgaria - 713</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 60191%;" aria-valuenow="60191" aria-valuemin="0" aria-valuemax="100"><b>Italy - 21067</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Bulgaria - 35</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 45840%;" aria-valuenow="45840" aria-valuemin="0" aria-valuemax="100"><b>Italy - 37130  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Bulgaria - 81</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Bulgaria-Page.html" role="button">Back to Bulgaria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Bulgaria-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Bulgaria-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Bulgaria-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

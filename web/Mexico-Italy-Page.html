@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Compare Mexico Infections, Deaths & Recovery</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawInfectionsChart);
+      google.charts.setOnLoadCallback(drawDeathsChart);
+      google.charts.setOnLoadCallback(drawRecoveryChart);
+
+      function drawInfectionsChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Mexico Infections','Italy Infections'],['01/23',0,0],['02/28',1,888],['02/29',4,1128],['03/01',5,1694],['03/03',5,2502],['03/06',6,4636],['03/08',7,7375],['03/10',7,10149],['03/11',20,30122],['03/12',12,0],['03/14',26,24747],['03/15',41,0],['03/16',53,27980],['03/17',82,31506],['03/18',93,35713],['03/19',118,41035],['03/20',164,47021],['03/21',203,53578],['03/22',251,59138],['03/23',316,63927],['03/24',367,69176],['03/25',405,74386],['03/26',475,80589],['03/27',585,86498],['03/28',717,92472],['03/29',848,97689],['03/30',993,101739],['03/31',1094,105792],['04/01',1215,110574],['04/02',1378,115242],['04/03',1510,119827],['04/04',1688,124632],['04/05',1890,128948],['04/06',2143,132547],['04/07',2439,135586],['04/08',2785,139422],['04/09',3181,143626],['04/10',3441,147577],['04/11',3844,152271],['04/12',4219,156363],['04/13',4661,159516],['04/14',5014,162488]
+        ]);
+       
+        var options = {
+          title: 'COVID-19 Infections - Mexico & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('infections_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawDeathsChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Mexico Deaths','Italy Deaths'],['01/23',0,0],['02/28',0,21],['02/29',0,29],['03/01',0,34],['03/03',0,79],['03/06',0,197],['03/08',0,366],['03/10',0,631],['03/11',0,2093],['03/12',0,0],['03/14',0,1809],['03/15',0,0],['03/16',0,2158],['03/17',0,2503],['03/18',0,2978],['03/19',1,3405],['03/20',1,4032],['03/21',2,4825],['03/22',2,5476],['03/23',3,6077],['03/24',4,6820],['03/25',5,7503],['03/26',6,8215],['03/27',8,9134],['03/28',12,10023],['03/29',16,10779],['03/30',20,11591],['03/31',28,12428],['04/01',29,13155],['04/02',37,13915],['04/03',50,14681],['04/04',60,15362],['04/05',79,15887],['04/06',94,16523],['04/07',125,17127],['04/08',141,17669],['04/09',174,18279],['04/10',194,18849],['04/11',233,19468],['04/12',273,19899],['04/13',296,20465],['04/14',332,21067]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Deaths - Mexico & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('deaths_chart'));
+
+        chart.draw(data, options);
+      }
+
+      function drawRecoveryChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Date', 'Mexico Recovery','Italy Recovery'],['01/23',0,0],['02/28',0,46],['02/29',0,46],['03/01',0,83],['03/03',1,160],['03/06',1,523],['03/08',1,622],['03/10',4,724],['03/11',8,2484],['03/12',4,0],['03/14',4,2335],['03/15',4,0],['03/16',4,2749],['03/17',4,2941],['03/18',4,4025],['03/19',4,4440],['03/20',4,4440],['03/21',4,6072],['03/22',4,7024],['03/23',4,7432],['03/24',4,8326],['03/25',4,9362],['03/26',4,10361],['03/27',4,10950],['03/28',4,12384],['03/29',4,13030],['03/30',35,14620],['03/31',35,15729],['04/01',35,16847],['04/02',35,18278],['04/03',633,19758],['04/04',633,20996],['04/05',633,21815],['04/06',633,22837],['04/07',633,24392],['04/08',633,26491],['04/09',633,28470],['04/10',633,30455],['04/11',633,32534],['04/12',1772,34211],['04/13',1843,35435],['04/14',1964,37130]
+        ]);
+
+        var options = {
+          title: 'COVID-19 Recovery - Mexico & Italy',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('recovery_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+<style>
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+</style>
+
+  </head>
+  <body >
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">COVID-19</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <H3><b>COVID-19 Mexico - Italy REPORT</b></H3>
+          </div>
+          <div class="row justify-content-md-center">
+            <h8><a href="https://github.com/CSSEGISandData/COVID-19">Novel Coronavirus (COVID-19) cases data provided by JHU CSSE </h8></a>
+           </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar" role="progressbar" style="width: 3241%;" aria-valuenow="3241" aria-valuemin="0" aria-valuemax="100"><b>Italy - 162488</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Mexico - 5014</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 6345%;" aria-valuenow="6345" aria-valuemin="0" aria-valuemax="100"><b>Italy - 21067</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Mexico - 332</b></div>
+              </div>
+              <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 1891%;" aria-valuenow="1891" aria-valuemin="0" aria-valuemax="100"><b>Italy - 37130  </b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Mexico - 1964</b></div>
+              </div>
+             </div>
+          </div>
+          <div class="row justify-content-md-center">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Mexico-Page.html" role="button">Back to Mexico</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Mexico-China-Page.html' role="button"  >Compare To China</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Mexico-Italy-Page.html' role="button"  >Compare to Italy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href='Mexico-Spain-Page.html' role="button"  >Compare to Spain</a>
+                  </li>
+                </ul>
+         </div>
+         
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+               <div id="infections_chart" style="height: 500px"></div>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="deaths_chart" style="height: 500px"></div>
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="col-md-10 offset-md-1">
+                <div id="recovery_chart" style="height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
