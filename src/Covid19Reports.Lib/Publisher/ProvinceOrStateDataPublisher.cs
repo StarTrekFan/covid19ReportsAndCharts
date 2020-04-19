@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.IO;
-
+using System.Threading.Tasks;
 namespace Covid19Reports.Lib.Publisher
 {
     public class ProvinceOrStateDataPublisher : Covid19ReportPublisher
@@ -22,7 +22,7 @@ namespace Covid19Reports.Lib.Publisher
             var hasStatesOrProvinceDate = VirusTrackerItems.Select(item => item.ProvinceOrState)
                                                            .Any(state => !string.IsNullOrEmpty(state.Trim()));
 
-            distinctStatesOrProvinces.ForEach(provinceOrState => 
+            Parallel.ForEach(distinctStatesOrProvinces,provinceOrState => 
             {
                    
                  var reportName = string.Format(@"{0}\{1}-{2}-Page.html",DestinationFolder,Country,provinceOrState);

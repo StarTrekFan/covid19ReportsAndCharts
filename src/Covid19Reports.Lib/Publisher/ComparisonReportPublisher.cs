@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.IO;
-
+using System.Threading.Tasks;
 namespace Covid19Reports.Lib.Publisher
 {
     public class ComparisonReportPublisher : Covid19ReportPublisher
@@ -10,7 +10,11 @@ namespace Covid19Reports.Lib.Publisher
         {
             ValidateInputs();
 
-            OtherCountries.ForEach(oCountry => PublishCompareReport(oCountry));
+            //OtherCountries.ForEach(oCountry => PublishCompareReport(oCountry));
+
+            Parallel.ForEach(OtherCountries, oCountry => {
+                PublishCompareReport(oCountry);
+            });
         }
 
         private void PublishCompareReport (string otherCountry)
