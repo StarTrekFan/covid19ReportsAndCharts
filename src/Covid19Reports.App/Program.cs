@@ -1,12 +1,9 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Binder;
-using Microsoft.Extensions.Configuration.Json;
 using Covid19Reports.Lib;
 using Covid19Reports.Lib.Publisher;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Covid19Reports.App
@@ -18,20 +15,13 @@ namespace Covid19Reports.App
         static void Main(string[] args)
         {
 
+          
+
             //This is the consolidated list of all data that will be used to generate the 
             //static web pages
             var virusTrackerItems = GetVirusTrackerItems();
 
-         /*   var landingPageTask = Task.Run(() => PublishLandingPage(virusTrackerItems));
-
-            var countryReportsTask = Task.Run(() => PublishCountryReports(virusTrackerItems));
-
-            var comparisonReportTasks = Task.Run(() => PublishComparisionReports(virusTrackerItems));
-
-            await Task.WhenAll(landingPageTask,countryReportsTask,comparisonReportTasks);
-   
-           */
-           
+         
             //The first page on the site with a list of all countries and their data
             PublishLandingPage(virusTrackerItems);
         
@@ -42,6 +32,7 @@ namespace Covid19Reports.App
             //but it will be very slow
             PublishComparisionReports(virusTrackerItems);
          
+         
         }
 
         private static void PublishComparisionReports(List<VirusTrackerItem> virusTrackerItems)
@@ -51,6 +42,31 @@ namespace Covid19Reports.App
 
             var virusTrackerItemsForOtherCountries = GetVirusTrackerItems(GetCountriesToCompare(),virusTrackerItems);
 
+            
+            Parallel.ForEach(countries,country => {
+                
+                var comparisonReportPublisher = new ComparisonReportPublisher();
+
+                comparisonReportPublisher.Country = country;
+
+                comparisonReportPublisher.DestinationFolder = ConfigRoot["DestinationFolder"];
+
+                comparisonReportPublisher.OtherCountries = GetCountriesToCompare();
+
+                var virusTrackerItemsCombined = new List<VirusTrackerItem>();
+
+                virusTrackerItemsCombined.AddRange(virusTrackerItemsForOtherCountries);
+
+                virusTrackerItemsCombined.AddRange(virusTrackerItems.Where(item => item.Country == country));
+               
+                comparisonReportPublisher.VirusTrackerItems = virusTrackerItemsCombined;
+
+                comparisonReportPublisher.PublishWebReports();
+            });
+              
+               
+
+            /*
             countries.ForEach(country => {
               
                 var comparisonReportPublisher = new ComparisonReportPublisher();
@@ -72,6 +88,7 @@ namespace Covid19Reports.App
                 comparisonReportPublisher.PublishWebReports();
 
             });
+            */
         }
         private static void PublishLandingPage(List<VirusTrackerItem> virusTrackerItems)
         {
@@ -88,14 +105,26 @@ namespace Covid19Reports.App
         {
             //Following reports are to be generated for all Countries
             var countries = virusTrackerItems.Select(item => item.Country).Distinct().ToList();
-            CountryReportPublishers.ForEach(publisher => {
+
+           
+            Parallel.ForEach(CountryReportPublishers,publisher => {
+
+                countries.ForEach(country => {
+                     PublishReport(publisher,country,virusTrackerItems.Where(item => item.Country == country).ToList());
+                });
+            });
+                
+             
+            /*
+          CountryReportPublishers.ForEach(publisher => {
 
                 countries.ForEach(country => {
                      PublishReport(publisher,country,virusTrackerItems.Where(item => item.Country == country).ToList());
                   });
                
             });
-
+         
+            */
         }
         private static void PublishReport(Covid19ReportPublisher publisher,string country, List<VirusTrackerItem> virusTrackerItems)
         {

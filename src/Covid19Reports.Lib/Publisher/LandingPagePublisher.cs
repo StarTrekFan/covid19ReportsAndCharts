@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.IO;
-
+using System.Threading.Tasks;
 namespace Covid19Reports.Lib.Publisher
 {
     //This class will generate the starting page on the static site. It will be named Index.html
