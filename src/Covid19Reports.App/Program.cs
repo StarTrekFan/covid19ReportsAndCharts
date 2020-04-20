@@ -15,7 +15,6 @@ namespace Covid19Reports.App
         static void Main(string[] args)
         {
        
-
             //This is the consolidated list of all data that will be used to generate the 
             //static web pages
             var virusTrackerItems = GetVirusTrackerItems();

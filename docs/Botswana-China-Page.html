@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Botswana Infections','China Infections'],['03/30',3,78087],['03/31',4,74969],['04/01',4,74190],['04/02',4,78803],['04/03',4,77177],['04/04',4,76022],['04/05',6,77250],['04/06',6,78451],['04/07',6,75853],['04/08',6,75292],['04/09',13,77646],['04/10',13,76130],['04/11',13,78919],['04/12',13,78567],['04/13',13,76114],['04/14',13,77718],['04/15',13,77205],['04/16',15,74952],['04/17',15,77095],['04/18',15,74729]
+          ['Date', 'Botswana Infections','China Infections'],['03/30',3,78087],['03/31',4,74969],['04/01',4,74190],['04/02',4,78803],['04/03',4,77177],['04/04',4,76022],['04/05',6,77250],['04/06',6,78451],['04/07',6,75853],['04/08',6,75292],['04/09',13,77646],['04/10',13,76130],['04/11',13,78919],['04/12',13,78567],['04/13',13,76114],['04/14',13,77718],['04/15',13,77205],['04/16',15,74952],['04/17',15,77095],['04/18',15,74729],['04/19',20,75712]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Botswana Deaths','China Deaths'],['03/30',0,3245],['03/31',1,3228],['04/01',1,3252],['04/02',1,3276],['04/03',1,3272],['04/04',1,3276],['04/05',1,3275],['04/06',1,3320],['04/07',1,3277],['04/08',1,3271],['04/09',1,3297],['04/10',1,3267],['04/11',1,3298],['04/12',1,3314],['04/13',1,3279],['04/14',1,3307],['04/15',1,3284],['04/16',1,3282],['04/17',1,4577],['04/18',1,4555]
+            ['Date', 'Botswana Deaths','China Deaths'],['03/30',0,3245],['03/31',1,3228],['04/01',1,3252],['04/02',1,3276],['04/03',1,3272],['04/04',1,3276],['04/05',1,3275],['04/06',1,3320],['04/07',1,3277],['04/08',1,3271],['04/09',1,3297],['04/10',1,3267],['04/11',1,3298],['04/12',1,3314],['04/13',1,3279],['04/14',1,3307],['04/15',1,3284],['04/16',1,3282],['04/17',1,4577],['04/18',1,4555],['04/19',1,4565]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Botswana Recovery','China Recovery'],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',0,70564],['04/05',0,71956],['04/06',0,73218],['04/07',0,70684],['04/08',0,70182],['04/09',0,72611],['04/10',0,71182],['04/11',0,73799],['04/12',0,73458],['04/13',0,70991],['04/14',0,72840],['04/15',0,72240],['04/16',0,70044],['04/17',0,71052],['04/18',0,68948]
+            ['Date', 'Botswana Recovery','China Recovery'],['03/30',0,71873],['03/31',0,69018],['04/01',0,68260],['04/02',0,73101],['04/03',0,71511],['04/04',0,70564],['04/05',0,71956],['04/06',0,73218],['04/07',0,70684],['04/08',0,70182],['04/09',0,72611],['04/10',0,71182],['04/11',0,73799],['04/12',0,73458],['04/13',0,70991],['04/14',0,72840],['04/15',0,72240],['04/16',0,70044],['04/17',0,71052],['04/18',0,68948],['04/19',0,69856]
         ]);
 
         var options = {
@@ -113,15 +113,15 @@ code {
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 498193%;" aria-valuenow="498193" aria-valuemin="0" aria-valuemax="100"><b>China - 74729</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Botswana - 15</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 378560%;" aria-valuenow="378560" aria-valuemin="0" aria-valuemax="100"><b>China - 75712</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Botswana - 20</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 455500%;" aria-valuenow="455500" aria-valuemin="0" aria-valuemax="100"><b>China - 4555</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 456500%;" aria-valuenow="456500" aria-valuemin="0" aria-valuemax="100"><b>China - 4565</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Botswana - 1</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>China - 68948  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>China - 69856  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Botswana - 0</b></div>
               </div>
              </div>
