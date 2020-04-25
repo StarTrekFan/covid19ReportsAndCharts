@@ -5,6 +5,8 @@ using Covid19Reports.Lib.Publisher;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.IO;
 
 namespace Covid19Reports.App
 {
@@ -12,14 +14,15 @@ namespace Covid19Reports.App
     {
 
         private static IConfigurationRoot _configRoot;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
        
+            await DownoadCovid19TrackerData();
+
             //This is the consolidated list of all data that will be used to generate the 
             //static web pages
             var virusTrackerItems = GetVirusTrackerItems();
 
-         
             //The first page on the site with a list of all countries and their data
             PublishLandingPage(virusTrackerItems);
         
@@ -132,6 +135,46 @@ namespace Covid19Reports.App
 
             return virusTrackerItemsForOtherCountries;
 
+        }
+
+        private static async Task  DownoadCovid19TrackerData()
+        {
+            var cSSEGISandDataLocation  = ConfigRoot["CSSEGISandData"];
+
+            var client = new HttpClient();
+
+            
+            var contents = await client.GetByteArrayAsync(cSSEGISandDataLocation);
+
+            File.WriteAllBytes("Covid19Data.zip",contents);
+
+            System.IO.Compression.ZipFile.ExtractToDirectory("Covid19Data.zip",".");
+
+            var csvFiles = Directory.GetFiles(@"COVID-19-master\csse_covid_19_data\csse_covid_19_daily_reports","*.csv");
+
+            //Copy the CSV files with the infection data to the daily reports folder
+            csvFiles.ToList().ForEach(csvFile => File.Copy(csvFile,string.Format(@"..\..\csse_covid_19_daily_reports\{0}",(new FileInfo(csvFile).Name)),true));
+
+            //Remove the folder where the downloaded COvid-19 data was extracted
+            DeleteDirectory("COVID-19-master");
+
+            //Remove the Zip file with COvid19-Data
+            File.Delete("Covid19Data.zip");
+        }
+
+        private static void DeleteDirectory(string directoryName)
+        {
+            var subDirectories = Directory.GetDirectories(directoryName);
+
+            if (subDirectories.Any())
+            {
+                subDirectories.ToList().ForEach(subDirectory => DeleteDirectory(subDirectory));
+            }
+
+            var files = Directory.GetFiles(directoryName);
+            files.ToList().ForEach(file => File.Delete(file));
+
+            Directory.Delete(directoryName);
         }
         private static IConfigurationRoot ConfigRoot
         {
