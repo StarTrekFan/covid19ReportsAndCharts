@@ -33,6 +33,12 @@ namespace Covid19Reports.Lib
 
         public List<VirusTrackerItem> GetVirusTrackerItems()
         {
+            var trackerFileInfo =new FileInfo(_trackerFile);
+
+            //Starting with 4/23, we are unable to trust the LastUpdateDate on the CSV files. We will replace
+            //the LastUpdate date with the tracker file date of they differ
+            var trackerFileDate = DateTime.Parse(trackerFileInfo.Name.Replace(trackerFileInfo.Extension,string.Empty));
+
             using (var reader = new StreamReader(_trackerFile))
             {
                 using (var csv = new CsvReader(reader,CultureInfo.InvariantCulture))
@@ -47,6 +53,9 @@ namespace Covid19Reports.Lib
                             var dynamicRecord = (IDictionary<string, object>) record;
 
                             var virusTrackerItem = GetVirusTrackerItem(dynamicRecord);
+
+                            if (!virusTrackerItem.StatusDate.ToShortDateString().Equals(trackerFileDate.ToShortDateString()))
+                                virusTrackerItem.StatusDate = trackerFileDate;
     
                             AddVirusTrackerItem(virusTrackerItem);
                         });

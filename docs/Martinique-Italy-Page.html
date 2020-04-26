@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Martinique Infections','Italy Infections'],['03/07',2,5883],['03/11',6,30122],['03/14',9,24747],['03/16',15,27980],['03/17',16,31506],['03/18',19,35713],['03/19',23,41035],['03/20',32,47021]
+          ['Date', 'Martinique Infections','Italy Infections'],['03/07',2,5883],['03/08',2,7375],['03/09',2,9172],['03/10',2,10149],['03/11',3,12462],['03/12',3,12462],['03/14',9,21157],['03/15',9,24747],['03/16',15,27980],['03/17',16,31506],['03/18',19,35713],['03/19',23,41035],['03/20',32,47021],['03/21',32,53578]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Martinique Deaths','Italy Deaths'],['03/07',0,233],['03/11',0,2093],['03/14',0,1809],['03/16',1,2158],['03/17',1,2503],['03/18',1,2978],['03/19',1,3405],['03/20',1,4032]
+            ['Date', 'Martinique Deaths','Italy Deaths'],['03/07',0,233],['03/08',0,366],['03/09',0,463],['03/10',0,631],['03/11',0,827],['03/12',0,827],['03/14',0,1441],['03/15',0,1809],['03/16',1,2158],['03/17',1,2503],['03/18',1,2978],['03/19',1,3405],['03/20',1,4032],['03/21',1,4825]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Martinique Recovery','Italy Recovery'],['03/07',0,589],['03/11',0,2484],['03/14',0,2335],['03/16',0,2749],['03/17',0,2941],['03/18',0,4025],['03/19',0,4440],['03/20',0,4440]
+            ['Date', 'Martinique Recovery','Italy Recovery'],['03/07',0,589],['03/08',0,622],['03/09',0,724],['03/10',0,724],['03/11',0,1045],['03/12',0,1045],['03/14',0,1966],['03/15',0,2335],['03/16',0,2749],['03/17',0,2941],['03/18',0,4025],['03/19',0,4440],['03/20',0,4440],['03/21',0,6072]
         ]);
 
         var options = {
@@ -113,15 +113,15 @@ code {
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 146941%;" aria-valuenow="146941" aria-valuemin="0" aria-valuemax="100"><b>Italy - 47021</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 167431%;" aria-valuenow="167431" aria-valuemin="0" aria-valuemax="100"><b>Italy - 53578</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Martinique - 32</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 403200%;" aria-valuenow="403200" aria-valuemin="0" aria-valuemax="100"><b>Italy - 4032</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 482500%;" aria-valuenow="482500" aria-valuemin="0" aria-valuemax="100"><b>Italy - 4825</b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Martinique - 1</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>Italy - 4440  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>Italy - 6072  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Martinique - 0</b></div>
               </div>
              </div>

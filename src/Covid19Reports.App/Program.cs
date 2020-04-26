@@ -14,10 +14,10 @@ namespace Covid19Reports.App
     {
 
         private static IConfigurationRoot _configRoot;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
        
-           // await DownoadCovid19TrackerData();
+            await DownoadCovid19TrackerData();
 
             //This is the consolidated list of all data that will be used to generate the 
             //static web pages
@@ -137,13 +137,12 @@ namespace Covid19Reports.App
 
         }
 
-        private static async Task  DownoadCovid19TrackerData()
+        private async static Task  DownoadCovid19TrackerData()
         {
             var cSSEGISandDataLocation  = ConfigRoot["CSSEGISandData"];
 
             var client = new HttpClient();
-
-            
+    
             var contents = await client.GetByteArrayAsync(cSSEGISandDataLocation);
 
             File.WriteAllBytes("Covid19Data.zip",contents);
