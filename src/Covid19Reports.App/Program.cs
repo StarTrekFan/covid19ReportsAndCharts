@@ -14,10 +14,10 @@ namespace Covid19Reports.App
     {
 
         private static IConfigurationRoot _configRoot;
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
        
-            await DownoadCovid19TrackerData();
+           // await DownoadCovid19TrackerData();
 
             //This is the consolidated list of all data that will be used to generate the 
             //static web pages
