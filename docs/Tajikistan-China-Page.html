@@ -18,7 +18,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Tajikistan Infections','China Infections'],['04/30',15,83956],['05/01',15,83959],['05/02',76,83959],['05/03',128,83964]
+          ['Date', 'Tajikistan Infections','China Infections'],['04/30',15,83956],['05/01',15,83959],['05/02',76,83959],['05/03',128,83964],['05/04',230,83966],['05/05',293,83968]
         ]);
        
         var options = {
@@ -34,7 +34,7 @@
 
       function drawDeathsChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Tajikistan Deaths','China Deaths'],['04/30',0,4637],['05/01',0,4637],['05/02',2,4637],['05/03',2,4637]
+            ['Date', 'Tajikistan Deaths','China Deaths'],['04/30',0,4637],['05/01',0,4637],['05/02',2,4637],['05/03',2,4637],['05/04',3,4637],['05/05',5,4637]
         ]);
 
         var options = {
@@ -50,7 +50,7 @@
 
       function drawRecoveryChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Date', 'Tajikistan Recovery','China Recovery'],['04/30',0,78523],['05/01',0,78573],['05/02',0,78586],['05/03',0,78684]
+            ['Date', 'Tajikistan Recovery','China Recovery'],['04/30',0,78523],['05/01',0,78573],['05/02',0,78586],['05/03',0,78684],['05/04',0,78792],['05/05',0,78870]
         ]);
 
         var options = {
@@ -113,15 +113,15 @@ code {
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar" role="progressbar" style="width: 65597%;" aria-valuenow="65597" aria-valuemin="0" aria-valuemax="100"><b>China - 83964</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Tajikistan - 128</b></div>
+                <div class="progress-bar" role="progressbar" style="width: 28658%;" aria-valuenow="28658" aria-valuemin="0" aria-valuemax="100"><b>China - 83968</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections - Tajikistan - 293</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 231850%;" aria-valuenow="231850" aria-valuemin="0" aria-valuemax="100"><b>China - 4637</b></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Tajikistan - 2</b></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 92740%;" aria-valuenow="92740" aria-valuemin="0" aria-valuemax="100"><b>China - 4637</b></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Deaths - Tajikistan - 5</b></div>
               </div>
               <div class="progress" style="height:25px; margin: 5PX 5PX 0PX;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>China - 78684  </b></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: ∞%;" aria-valuenow="∞" aria-valuemin="0" aria-valuemax="100"><b>China - 78870  </b></div>
                 <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery - Tajikistan - 0</b></div>
               </div>
              </div>
