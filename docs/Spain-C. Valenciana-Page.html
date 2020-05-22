@@ -16,7 +16,7 @@
 
       function drawInfectionsChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Date', 'Infections','Deaths','Recovery'],['05/14',10784,1349,9490],['05/15',10813,1358,9708],['05/16',10850,1365,9761],['05/17',10850,1365,9761]
+          ['Date', 'Infections','Deaths','Recovery'],['05/14',10784,1349,9490],['05/15',10813,1358,9708],['05/16',10850,1365,9761],['05/17',10850,1365,9761],['05/18',10914,1370,9970],['05/19',10962,1370,0],['05/20',10949,1378,0],['05/21',10987,1383,0]
         ]);
 
         var options = {
@@ -66,15 +66,15 @@
         <div class="row">
           <div class="col-md-6 offset-md-3">
             <div class="progress" style="height:25px; margin: 0px 0px 5px;">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections: 10850</b></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Infections: 10987</b></div>
             </div>
             <div class="progress" style="height:25px; margin: 0px 0px 5px;">
               <div class="progress-bar bg-danger" role="progressbar" style="width: 13%;" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
-              <div class="progress-bar bg-info" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><b>Deaths: 1365</b></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 87%;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><b>Deaths: 1383</b></div>
             </div>
             <div class="progress" style="height:25px; margin: 0px 0px 5px;">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              <div class="progress-bar bg-info" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><b>Recovery: 9761</b></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><b>Recovery: 0</b></div>
             </div>
            </div>
 
